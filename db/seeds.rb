@@ -75,6 +75,8 @@ cities.each do |city_name|
       itinerary: new_itinerary
     )
 
+    puts 'hello world'
+
 #  # Seeds for Stops
 
       stops.each do |stop, category|

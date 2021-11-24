@@ -1,20 +1,27 @@
-.banner {
+.home-banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 100px 0 150px 0;
+  min-height: 100vh;
+  .world-background {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    z-index: -1;
+  }
 }
 
-.banner h1 {
+.home-banner h1 {
   margin: 0;
-  color: white;
+  color: rgb(24, 24, 24);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
 }
 
-.banner p {
+.home-banner p {
   font-size: 20px;
-  color: white;
+  color: rgb(24, 24, 24);
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
