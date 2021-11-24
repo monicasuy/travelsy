@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Cities</h1>
+
+  <div class="cards">
+    <% @cities.each do |city| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/2300595/pexels-photo-2300595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')">
+      <%= city.name %>
+    </div>
+    <% end %>
+  </div>
+</div>
