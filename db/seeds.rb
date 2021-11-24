@@ -47,10 +47,9 @@ User.create!(
   )
 
 
-
 # Seeds for Cities
 
-cities = ["Barcelona", "Istanbul", "New York", "Paris", "New York", "London", "Bangkok", "Dubai", "Beijing", "Tokyo", "Rome", "Delhi","Moscow" ]
+cities = ["Barcelona", "Istanbul", "New York", "Paris", "London", "Bangkok", "Dubai", "Beijing", "Tokyo", "Rome", "Delhi","Moscow" ]
 
 stops = { "Sagrada Familia" => "monuments", "Park Guell" => "monuments", "Camp Nou" => "sports", "Gothic Square" => "neighborhoods", "Bunkers" => "views", "Monjuic" => "views", "Casa Mila" => "monuments", "La Rambla" => "neighborhoods", "Palau de la Música Catalana" => "museums", "Casa Batllo"=>"monuments" }
 
@@ -94,9 +93,4 @@ cities.each do |city_name|
 end
 
 
-puts City.count
-puts Itinerary.count
-puts Stop.count
-puts Review.count
-puts Itinerary.first.stops.count
  # Seeds for Reviews
