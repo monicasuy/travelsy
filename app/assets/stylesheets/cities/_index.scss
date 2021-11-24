@@ -1,4 +1,4 @@
-.card-category {
+.home-card-category {
   background-size: cover;
   background-position: center;
   height: 310px;
@@ -11,10 +11,41 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,1);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+
 }
 
-.cards {
+.home-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
+
+  a:hover {
+  text-decoration: none;
+  }
+}
+
+.home-cards-container {
+  background-color: white;
+  padding-top: 20px;
+}
+
+.home-itinerary-image {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-headers {
+  padding: 50px 0;
+}
+
+#home-header {
+  justify-content: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.home-banner h1 {
+  font-size: 60px;
 }
