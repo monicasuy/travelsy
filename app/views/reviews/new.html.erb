@@ -1,0 +1,8 @@
+<div class="new-review-container">
+<h1> Help other travelers and leave a review</h1>
+
+  <%= simple_form_for [ @itinerary, @review ] do |f| %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+</div>

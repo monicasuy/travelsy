@@ -1,0 +1,9 @@
+<div class="new-city-container">
+  <h1>The city is not listed? not a problem! <br>
+  you can add it right away</h1>
+
+  <%= simple_form_for @city do |f| %>
+    <%= f.input :name %>
+    <%= f.submit %>
+  <% end %>
+</div>
