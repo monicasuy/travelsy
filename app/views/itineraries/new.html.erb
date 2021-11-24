@@ -1,0 +1,13 @@
+<div class="new-itinerary-container">
+  <h1>Share your itinerary with other travelers</h1>
+
+
+  <%= simple_form_for [ @city, @itinerary ] do |f| %>
+    <%# <%= f.simple_fields_for :stops do |stops| %>
+      <%# <%= stops.input :content %>
+    <%# <% end %>
+    <%= f.input :days %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+</div>
