@@ -1,4 +1,5 @@
-<div class="banner">
+<div class="home-banner">
+  <%= image_tag 'world.svg', class: "world-background"%>
   <div class="container">
     <h1>Travelsy</h1>
     <p>Squeeze the most out of your destination</p>
@@ -7,15 +8,27 @@
 </div>
 
 
-<div class="container">
-  <h2>Not sure where to go?</h2>
-  <h4>Take a look at our most popular destinations</h4>
 
-  <div class="cards">
-    <% @cities.each do |city| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/1600x900/?<%= city.name %>')">
-      <%= city.name %>
+
+<div class="home-cards-container">
+
+  <div class="container">
+    <h1 id="home-header">How it works</h1>
+    <div>
+      <%= image_tag 'home-page-route.svg', class: "home-itinerary-image" %>
     </div>
-    <% end %>
+    <div class="home-headers">
+    <h2>Not sure where to go?</h2>
+    <h4>Take a look at our most popular destinations</h4>
+    </div>
+    <div class="home-cards">
+      <% @cities.each do |city| %>
+          <%= link_to '#' do %>
+          <div class="home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/1600x900/?<%= city.name %>')">
+            <h3><strong><%= city.name %></strong></h3>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
