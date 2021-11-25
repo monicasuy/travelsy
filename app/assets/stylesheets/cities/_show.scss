@@ -1,6 +1,6 @@
 
 .city-show-banner {
-  width: 1440px;
+  width: 1280px;
   height: 560px;
   color: white;
   background-size: cover;
@@ -29,11 +29,34 @@
 }
 
 .itinerary-card {
+  flex-direction: column;
   height: 320px;
   width: 320px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,1);
+  position: relative;
+  border-radius: 7px;
+  font-size: 25px;
+  margin-bottom: 50px;
+
+}
+.itinerary-card h1 {
+  margin-bottom: 50px;
 }
 
+
+
 .container {
-  margin-left: 100px;
+  width: 960;
+  margin-left: 150px;
   margin-top: 50px;
+  margin-right:150px;
+}
+
+
+.icons {
+  position: absolute;
+  bottom: 5%;
+  left: 5%
+
 }

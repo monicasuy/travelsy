@@ -22,16 +22,67 @@
 
     <div class = 'top-rated'>
 
-      <h2>Top Rated Itinenaries </h2>
+      <h2>Top Rated Itineraries </h2>
 
       <div class="itinerary-cards">
-         <% @city.itineraries.each do |itinerary| %>
-          <div class = "itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/1600x900/?<%= @city.name %>')">
-              <%= itinerary.upvotes %>
-              <%= itinerary.days %>
+         <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
+              <div class="days">
+                <h1><strong><%= itinerary.days %> days </strong></h1>
+              </div>
+
+              <div class= "icons">
+                <%= itinerary.upvotes %>
+                <i class="fas fa-thumbs-up"></i>
+              </div>
           </div>
           <% end  %>
       </div>
+
    <div>
+
+   <div class = '3-day'>
+
+      <h2>3 Day Itineraries </h2>
+
+      <div class="itinerary-cards">
+         <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
+              <div class="days">
+                <h1><strong><%= itinerary.days %> days </strong></h1>
+              </div>
+
+              <div class= "icons">
+                <%= itinerary.upvotes %>
+                <i class="fas fa-thumbs-up"></i>
+              </div>
+          </div>
+          <% end  %>
+      </div>
+
+   <div>
+
+   <div class = '4-day'>
+
+      <h2>4 Day Itineraries </h2>
+
+      <div class="itinerary-cards">
+         <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
+              <div class="days">
+                <h1><strong><%= itinerary.days %> days </strong></h1>
+              </div>
+
+              <div class= "icons">
+                <%= itinerary.upvotes %>
+                <i class="fas fa-thumbs-up"></i>
+              </div>
+          </div>
+          <% end  %>
+      </div>
+
+   <div>
+
+
 
 </div>
