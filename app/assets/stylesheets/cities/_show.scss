@@ -37,20 +37,13 @@
   position: relative;
   border-radius: 7px;
   font-size: 25px;
-  margin-bottom: 50px;
-
-}
-.itinerary-card h1 {
-  margin-bottom: 50px;
 }
 
 
 
 .container {
   width: 960;
-  margin-left: 150px;
   margin-top: 50px;
-  margin-right:150px;
 }
 
 
@@ -58,5 +51,22 @@
   position: absolute;
   bottom: 5%;
   left: 5%
+}
 
+
+.filters {
+  width:fit-content;
+  background: #FFFCFC;
+  border: 2px solid #9B9595;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  padding-right: 10px;
+  margin-left: 10px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
 }
