@@ -1,4 +1,9 @@
 class ItinerariesController < ApplicationController
+  def show
+    @city = City.find(params[:city_id])
+    @itinerary = Itinerary.find(params[:id])
+  end
+
   def new
     @city = City.find(params[:city_id])
     @itinerary = Itinerary.new

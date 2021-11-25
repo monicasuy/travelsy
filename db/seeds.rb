@@ -75,7 +75,7 @@ cities.each do |city_name|
       itinerary: new_itinerary
     )
 
-    puts 'hello world'
+
 
 #  # Seeds for Stops
 
@@ -86,7 +86,8 @@ cities.each do |city_name|
           price: Faker::Number.digit,
           address: Faker::Address.street_address,
           category: category,
-          itinerary: new_itinerary
+          itinerary: new_itinerary,
+          day: [1, 2, 3, 4, 5].sample
         )
       end
   end

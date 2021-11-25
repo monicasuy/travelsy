@@ -1,0 +1,19 @@
+<div class="container">
+  <h1> Just one more thing</h1>
+  <%= "#{@itinerary.days} day itinerary" %>
+  <div class="itinerary-content">
+  <%= @itinerary.content %>
+    <%=  @itinerary.days.times do %>
+    <div class="card-product">
+      <img src="https://source.unsplash.com/200x300/?<%= @itinerary.city.name %>" alt="">
+      <div class="card-product-infos">
+        <ul>
+        <% @itinerary.stops.each do |stop| %>
+          <li><%= stop.title %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
