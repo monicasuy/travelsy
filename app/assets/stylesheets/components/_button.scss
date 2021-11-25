@@ -5,7 +5,9 @@
 .btn-flat,
 .btn-new-itinerary,
 .btn-new-city,
-.btn-new-review {
+.btn-new-review,
+.btn-login,
+.btn-signup {
   color: white;;
   background: #FF5F7E;;
   text-align: center;
@@ -20,13 +22,17 @@
 .btn-flat:hover,
 .btn-new-itinerary:hover,
 .btn-new-city:hover,
-.btn-new-review:hover {
+.btn-new-review:hover,
+.btn-login:hover,
+.btn-signup:hover {
   background: #FF6767;
   color: white;
 }
 
 .btn-new-itinerary,
 .btn-new-city,
-.btn-new-review {
+.btn-new-review,
+.btn-login,
+.btn-signup {
   padding: 15px 52px;
 }
