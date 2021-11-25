@@ -1,4 +1,9 @@
 class ItinerariesController < ApplicationController
+
+  def index
+    @itineraries = Itinerary.all
+  end
+
   def new
     @city = City.find(params[:city_id])
     @itinerary = Itinerary.new
@@ -15,6 +20,8 @@ class ItinerariesController < ApplicationController
       render :new
     end
   end
+
+
 
   private
 
