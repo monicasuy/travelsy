@@ -5,6 +5,7 @@ ruby '2.7.4'
 
 #Added by me
  gem 'faker'
+ gem 'geocoder'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'

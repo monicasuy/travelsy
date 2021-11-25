@@ -2,6 +2,15 @@ class ItinerariesController < ApplicationController
   def show
     @city = City.find(params[:city_id])
     @itinerary = Itinerary.find(params[:id])
+    @stops = @itinerary.stops
+
+    @markers = @stops.geocoded.map do |stop|
+      {
+        lat: stop.latitude,
+        lng: stop.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { stop: stop })
+      }
+    end
   end
 
   def new
