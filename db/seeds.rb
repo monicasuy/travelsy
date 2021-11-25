@@ -51,7 +51,56 @@ User.create!(
 
 cities = ["Barcelona", "Istanbul", "New York", "Paris", "London", "Bangkok", "Dubai", "Beijing", "Tokyo", "Rome", "Delhi","Moscow" ]
 
-stops = { "Sagrada Familia" => "monuments", "Park Guell" => "monuments", "Camp Nou" => "sports", "Gothic Square" => "neighborhoods", "Bunkers" => "views", "Monjuic" => "views", "Casa Mila" => "monuments", "La Rambla" => "neighborhoods", "Palau de la Música Catalana" => "museums", "Casa Batllo"=>"monuments" }
+stops = [
+  { name: "Sagrada Familia",
+  category: "monuments",
+  address: "Carrer de Mallorca, 401, 08013 Barcelona"
+  },
+
+  { name: "Park Güell",
+  category: "monuments",
+  address: "Carrer d'Olot, 08024 Barcelona"
+  },
+
+  { name: "Camp Nou",
+  category: "sports",
+  address: "C. d'Arístides Maillol, 12, 08028 Barcelona"
+  },
+
+  { name: "Gothic Quarters",
+  category: "neighborhoods",
+  address: "Carrer de la Ciutat, 1, 08002 Barcelona"
+  },
+
+  { name: "Bunkers",
+  category: "views",
+  address: "Carrer de Marià Labèrnia, s/n, 08032 Barcelona"
+  },
+
+  { name: "Montjuïc",
+  category: "views",
+  address: "Ctra. de Montjuïc, 66, 08038 Barcelona"
+  },
+
+  { name: "Casa Milà",
+  category: "monuments",
+  address: "P.º de Gracia, 92, 08008 Barcelona"
+  },
+
+   { name: "La Rambla",
+  category: "neighborhoods",
+  address: "La Rambla, 08002 Barcelona"
+  },
+
+  { name: "Palau de la Música Catalana",
+  category: "museums",
+  address: "C/ Palau de la Música, 4-6, 08003 Barcelona"
+  },
+
+  { name: "Casa Batlló",
+  category: "monuments",
+  address: "P.º de Gracia, 43, 08007 Barcelona"
+  } ]
 
 cities.each do |city_name|
    city = City.create!(
@@ -74,19 +123,24 @@ cities.each do |city_name|
       recommended_days: Faker::Number.between(from: 1, to: 5),
       itinerary: new_itinerary
     )
+    # addresses = ["Carrer de Mallorca, 401, 08013 Barcelona", "Carrer d'Olot, 08024 Barcelona",
+    #              "C. d'Arístides Maillol, 12, 08028 Barcelona", "Carrer de la Ciutat, 1, 08002 Barcelona",
+    #              "Carrer de Marià Labèrnia, s/n, 08032 Barcelona", "Ctra. de Montjuïc, 66, 08038 Barcelona",
+    #              "P.º de Gracia, 92, 08008 Barcelona", "La Rambla, 08002 Barcelona", "C/ Palau de la Música, 4-6, 08003 Barcelona",
+    #              "P.º de Gracia, 43, 08007 Barcelona"]
 
-    puts 'hello world'
 
 #  # Seeds for Stops
 
-      stops.each do |stop, category|
+      stops.each do |stop|
         Stop.create!(
-          title: stop,
+          title: stop[:name],
           content: Faker::Quote.matz,
           price: Faker::Number.digit,
-          address: Faker::Address.street_address,
-          category: category,
-          itinerary: new_itinerary
+          address: stop[:address],
+          category: stop[:category],
+          itinerary: new_itinerary,
+          day: [1, 2, 3, 4, 5].sample
         )
       end
   end

@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   resources :itineraries, only: [] do
     resources :reviews, only: %i[new create]
   end
+
+  resources :cities, only: [] do
+    resources :itineraries, only: %i[show]
+  end
 end
