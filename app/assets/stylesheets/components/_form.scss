@@ -2,7 +2,7 @@
   width: 470px;
 }
 
-.form-new {
+.form-new, .form-inputs {
   padding-left: 50px;
   display: flex;
   border-radius: 10px;
@@ -23,4 +23,9 @@
   margin-top: 60px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.form_inputs {
+  text-align: center;
+  display: inline-block;
 }
