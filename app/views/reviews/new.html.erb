@@ -1,8 +1,10 @@
-<div class="new-review-container">
-<h1> Help other travelers and leave a review</h1>
-
-  <%= simple_form_for [ @itinerary, @review ] do |f| %>
-    <%= f.input :content %>
-    <%= f.submit %>
-  <% end %>
+<div class="form-container">
+    <h1> Help other travelers by leaving a review</h1>
+  <div class="form-new">
+    <%= simple_form_for [ @itinerary, @review ] do |f| %>
+      <%= f.input :content %>
+      <%= f.submit "Submit", class: "btn-new-review"%>
+    <% end %>
+    <img src="https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="traveler">
+  </div>
 </div>

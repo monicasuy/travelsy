@@ -1,9 +1,13 @@
-<div class="new-city-container">
-  <h1>The city is not listed? not a problem! <br>
-  you can add it right away</h1>
+<div class="form-container">
+  <h1>The city is not listed?</h1>
+  <h3>No problem! you can add it right away</h3>
+
+<div class="form-new">
 
   <%= simple_form_for @city do |f| %>
     <%= f.input :name %>
-    <%= f.submit %>
+    <%= f.submit "Submit", class: "btn-new-city" %>
   <% end %>
+    <img src="https://images.pexels.com/photos/4179480/pexels-photo-4179480.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Florence">
+  </div>
 </div>
