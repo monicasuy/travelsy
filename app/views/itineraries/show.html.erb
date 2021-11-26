@@ -1,0 +1,27 @@
+<div class="main-container">
+  <div class="container">
+    <h2> Just one more thing</h2>
+    <div class="itinerary-content">
+    <%= @itinerary.content %>
+      <% @itinerary.stops.order('day ASC').each do |stop| %>
+      <div class="card-product">
+        <img src="https://source.unsplash.com/1600x900/?<%= stop.title %>" alt="">
+        <div class="card-product-infos">
+        <h2 class="day-header">Day <%= stop.day %></h2>
+          <ul>
+            <li><%= stop.title %></li>
+          </ul>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div id="map"
+     style="width: 100%; height: 800px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+</div>
+<div class="container">
+  <%= link_to 'Download', '#', class: 'btn-flat' %>
+</div>

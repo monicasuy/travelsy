@@ -13,7 +13,7 @@
 <div class="home-cards-container">
 
   <div class="container">
-    <h1 id="home-header">How it works</h1>
+    <h1 id="home-header">How it works?</h1>
     <div>
       <%= image_tag 'home-page-route.svg', class: "home-itinerary-image" %>
     </div>
@@ -23,7 +23,7 @@
     </div>
     <div class="home-cards">
       <% @cities.each do |city| %>
-          <%= link_to '#' do %>
+          <%= link_to city_path(city) do %>
           <div class="home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/1600x900/?<%= city.name %>')">
             <h3><strong><%= city.name %></strong></h3>
           </div>

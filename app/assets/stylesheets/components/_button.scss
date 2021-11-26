@@ -1,13 +1,38 @@
-
 .btn-flat {
-  color: white;;
   padding: 15px 40px;
-  border-radius: 4px;
-  background: #FF5F7E;;
-  transition: background 0.3s ease;
 }
 
-.btn-flat:hover {
-  background: #F9B3D1;;
+.btn-flat,
+.btn-new-itinerary,
+.btn-new-city,
+.btn-new-review,
+.btn-login,
+.btn-signup {
+  color: white;;
+  background: #FF5F7E;;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 20px;
+  border: none;
+}
+
+.btn-flat:hover,
+.btn-new-itinerary:hover,
+.btn-new-city:hover,
+.btn-new-review:hover,
+.btn-login:hover,
+.btn-signup:hover {
+  background: #FF6767;
   color: white;
+}
+
+.btn-new-itinerary,
+.btn-new-city,
+.btn-new-review,
+.btn-login,
+.btn-signup {
+  padding: 15px 52px;
 }
