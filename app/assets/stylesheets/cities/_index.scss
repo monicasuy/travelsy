@@ -20,6 +20,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
   margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 
   a:hover {
   text-decoration: none;
@@ -38,10 +40,13 @@
   display: flex;
   justify-content: center;
   margin-left: 55px;
+  margin-bottom: 70px;
 }
 
 .home-headers {
   padding: 50px 0;
+  margin-left: 40px;
+  line-height: 50px;
 }
 
 #home-header {
