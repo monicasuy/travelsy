@@ -3,7 +3,7 @@
   <div class='city-show-banner' style = "background-image: url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')" >
       <div class="cs-description" >
             <h1>Best Itineraries For  <%= @city.name %> </h1>
-            <h3>You are almost there </h3>
+            <h4>You are almost there </h4>
       </div>
     </div>
 <% else %>
@@ -86,7 +86,7 @@
 <div class="container cities-container">
     <div class = 'top-rated'>
 
-      <h2>Top Rated Itineraries </h2>
+      <h2 class="cities-headers">Top Rated Itineraries </h2>
 
       <div class="itinerary-cards">
          <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
@@ -113,12 +113,12 @@
 
 
   <div class = 'three-day'>
-      <h2>Best 3 Day Itineraries </h2>
+      <h2 class="cities-headers">Best 3 Day Itineraries </h2>
 
       <div class="itinerary-cards">
          <% @city.itineraries.order('upvotes DESC').first(3).each_with_index do |itinerary,index| %>
-         <%= link_to city_itinerary_path(itinerary) do %>
-         <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%=itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
+         <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
+         <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#=itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
               <div class= "icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
@@ -136,12 +136,12 @@
 
   <div class = "four-day">
 
-    <h2>Best 4 Day Itineraries </h2>
+    <h2 class="cities-headers">Best 4 Day Itineraries </h2>
 
     <div class="itinerary-cards">
          <% @city.itineraries.order('upvotes DESC').first(3).each_with_index do |itinerary, index| %>
-         <%= link_to city_itinerary_path(itinerary) do %>
-          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%=itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
+         <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
               <div class= "icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
