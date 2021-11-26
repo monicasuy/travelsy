@@ -3,12 +3,11 @@ class ItinerariesController < ApplicationController
   def index
     @itineraries = Itinerary.all
   end
-  
+
   def show
     @city = City.find(params[:city_id])
     @itinerary = Itinerary.find(params[:id])
-    @stops = @itinerary.stops
-
+    @stops = @itinerary.stops.order('day ASC')
     @markers = @stops.geocoded.map do |stop|
       {
         lat: stop.latitude,
