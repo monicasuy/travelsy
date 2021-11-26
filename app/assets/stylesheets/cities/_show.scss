@@ -9,18 +9,27 @@
   align-items: center;
 
 }
+.city-show-banner h1 {
+  color: white;
+}
+
 
 .cs-description {
   margin-left: 200px;
   margin-top: 100px;
   text-shadow: 1px 1px 3px rgba(0,0,0,1);
+
+}
+
+.cs-description h1 {
+  color: white;
 }
 
 
 .itinerary-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 15px;
 
   a:hover {
   text-decoration: none;
@@ -30,21 +39,27 @@
 
 .itinerary-card {
   flex-direction: column;
-  height: 320px;
+  height: 210px;
   width: 320px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,1);
   position: relative;
   border-radius: 7px;
   font-size: 25px;
+  color:white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,1);
+  h1 {
+    color:white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,1);
+    }
 }
+
 
 
 
 .cities-container {
+  margin-left: 25px;
   width: 960;
-  margin-top: 50px;
 }
+
 
 
 .icons {
@@ -54,6 +69,7 @@
 }
 
 
+
 .filters {
   width:fit-content;
   background: #FFFCFC;
@@ -61,12 +77,45 @@
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
-  padding-right: 10px;
-  margin-left: 10px;
+  padding: 20px;
+  margin-top: 70px;
+  p {
+    font-weight: bold;
+  }
+}
+
+
+
+.top-rated {
+  margin-bottom:50px;
+}
+.three-day {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.four-day {
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+
+
+.find {
+  margin-top: 20px;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+}
+
+.break {
+  margin-top:10px;
 }
 
 .cities-main-container {
   display: flex;
   justify-content: left;
-  align-items: baseline;
+  align-items:flex-start;
+  margin-top: 50px;
+  padding-left: 5px;
+  
 }
