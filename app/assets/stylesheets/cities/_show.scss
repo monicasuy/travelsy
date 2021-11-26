@@ -84,6 +84,9 @@
   border-radius: 14px;
   padding: 20px;
   margin-top: 70px;
+  p {
+    font-weight: bold;
+  }
 }
 
 
@@ -91,11 +94,13 @@
   margin-bottom:50px;
 }
 .three-day {
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .four-day {
-margin-bottom: 50px;
+  margin-top:50px;
+  margin-bottom: 50px;
 }
 
 
@@ -104,4 +109,8 @@ margin-bottom: 50px;
   color: black;
   text-align: center;
   font-size: 40px;
+}
+
+.break {
+  margin-top:10px;
 }
