@@ -3,8 +3,10 @@
   <div class='city-show-banner' style = "background-image: url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')" >
       <div class="cs-description" >
             <h1>Best Itineraries For  <%= @city.name %> </h1>
+
             <h4>You are almost there </h4>
       </div>
+
     </div>
 <% else %>
   <div class='city-show-banner' style = "background-image:   url('https://source.unsplash.com/1440x560/?<%= @city.name %>')" >
@@ -14,11 +16,10 @@
       </div>
   </div>
 <% end %>
-
+  <%= link_to "Create an Itinerary", new_city_itinerary_path(@city), class: "btn-flat btn-create-itinerary"%>
 
 
 <div class="cities-main-container">
-
   <div class="filters">
     <p> Filters</p>
 <div class="interests">
