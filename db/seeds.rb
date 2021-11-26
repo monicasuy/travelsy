@@ -112,8 +112,8 @@ cities.each do |city_name|
   5.times do
     new_itinerary = Itinerary.create!(
         content: Faker::Quote.matz,
-        days: Faker::Number.between(from: 1, to: 5),
-        upvotes: Faker::Number.digit,
+        days: Faker::Number.between(from: 2, to: 5),
+        upvotes: Faker::Number.between(from: 50, to: 1000),
         city: city,
         user: new_user
       )

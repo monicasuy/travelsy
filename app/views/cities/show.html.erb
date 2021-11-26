@@ -1,10 +1,124 @@
 
- <div class='city-show-banner' style = "background-image: url('https://source.unsplash.com/1440x560/?<%= @city.name %>')" >
-    <div class="cs-description" >
-          <h2>Best Itinenaries For  <%= @city.name %> </h2>
-          <h3>You are almost there </h3>
+ <% if @city.name == "Barcelona" %>
+  <div class='city-show-banner' style = "background-image: url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')" >
+      <div class="cs-description" >
+            <h1>Best Itinenaries For  <%= @city.name %> </h1>
+            <h3>You are almost there </h3>
+      </div>
     </div>
+<% else %>
+  <div class='city-show-banner' style = "background-image: url('https://source.unsplash.com/1440x560/?<%= @city.name %>')" >
+      <div class="cs-description" >
+            <h1>Best Itinenaries For  <%= @city.name %> </h1>
+            <h3>You are almost there </h3>
+      </div>
+  </div>
+<% end %>
+
+
+<h3> Find your itinerary for <%= @city.name %>  </h3>
+
+<div class="main-container">
+
+  <div class="filters">
+  <h2> Filters</h2>
+
+  <h2> Interest</h2>
+  <ul>
+    <li> Art</li>
+    <li>Eating Out</li>
+    <li>Partying</li>
+    <li>Tourism</li>
+  </ul>
+
+  <h2> Days</h2>
+
+  <h2>Category</h2>
+
+  <ul>
+    <li>Beach</li>
+    <li>Mountain</li>
+    <li>City</li>
+    <li>Desert</li>
+  </ul>
+
+ <h2>Budget</h2>
+
 </div>
 
+<div class="container">
+    <div class = 'top-rated'>
 
-<h3> Top Rated Itinenaries for Barcelona </h3>
+      <h2>Top Rated Itineraries </h2>
+
+      <div class="itinerary-cards">
+         <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
+              <div class="days">
+                <h1><strong><%= itinerary.days %> days </strong></h1>
+              </div>
+
+              <div class= "icons">
+                <%= itinerary.upvotes %>
+                <i class="fas fa-thumbs-up"></i>
+              </div>
+          </div>
+          <% end  %>
+      </div>
+
+    </div>
+
+    <hr style="width:50%; text-align:center; margin-left:0">
+
+
+
+
+  <div class = 'three-day'>
+      <h2>3 Day Itineraries </h2>
+
+      <div class="itinerary-cards">
+         <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
+
+              <div class="days">
+                <h1><strong><%= itinerary.days %> days </strong></h1>
+              </div>
+
+              <div class= "icons">
+                <%= itinerary.upvotes %>
+                <i class="fas fa-thumbs-up"></i>
+              </div>
+          </div>
+          <% end  %>
+      </div>
+
+   </div>
+
+
+
+  <div class = "four-day">
+
+    <h2>4 Day Itineraries </h2>
+
+    <div class="itinerary-cards">
+         <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
+
+              <div class="days">
+                <h1><strong><%= itinerary.days %> days </strong></h1>
+              </div>
+
+              <div class= "icons">
+                <%= itinerary.upvotes %>
+                <i class="fas fa-thumbs-up"></i>
+              </div>
+
+          </div>
+          <% end  %>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
