@@ -2,21 +2,20 @@
  <% if @city.name == "Barcelona" %>
   <div class='city-show-banner' style = "background-image: url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')" >
       <div class="cs-description" >
-            <h1>Best Itinenaries For  <%= @city.name %> </h1>
+            <h1>Best Itineraries For  <%= @city.name %> </h1>
             <h3>You are almost there </h3>
       </div>
     </div>
 <% else %>
-  <div class='city-show-banner' style = "background-image: url('https://source.unsplash.com/1440x560/?<%= @city.name %>')" >
+  <div class='city-show-banner' style = "background-image:   url('https://source.unsplash.com/1440x560/?<%= @city.name %>')" >
       <div class="cs-description" >
-            <h1>Best Itinenaries For  <%= @city.name %> </h1>
+            <h1>Best Itineraries For  <%= @city.name %> </h1>
             <h3>You are almost there </h3>
       </div>
   </div>
 <% end %>
 
 
-<h3> Find your itinerary for <%= @city.name %>  </h3>
 
 <div class="main-container">
 
@@ -74,16 +73,11 @@
 
 
   <div class = 'three-day'>
-      <h2>3 Day Itineraries </h2>
+      <h2>Best 3 Day Itineraries </h2>
 
       <div class="itinerary-cards">
-         <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
-          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
-
-              <div class="days">
-                <h1><strong><%= itinerary.days %> days </strong></h1>
-              </div>
-
+         <% @city.itineraries.order('upvotes DESC').first(3).each_with_index do |itinerary,index| %>
+         <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%=itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
               <div class= "icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
@@ -94,20 +88,17 @@
 
    </div>
 
+   <hr style="width:50%; text-align:center; margin-left:0">
+
 
 
   <div class = "four-day">
 
-    <h2>4 Day Itineraries </h2>
+    <h2>Best 4 Day Itineraries </h2>
 
     <div class="itinerary-cards">
-         <% @city.itineraries.order('upvotes DESC').first(3).each do |itinerary| %>
-          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
-
-              <div class="days">
-                <h1><strong><%= itinerary.days %> days </strong></h1>
-              </div>
-
+         <% @city.itineraries.order('upvotes DESC').first(3).each_with_index do |itinerary, index| %>
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%=itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
               <div class= "icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
