@@ -16,12 +16,9 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-1">
-        <h1>STEP 1</h1>
+        <h1>I would like to got to...</h1>
         <div class="col-6">
-          <%= text_field_tag :cities,
-            params[:cities],
-            class: "form-control",
-            placeholder: "Find a destination" %>
+          <%= select_tag "department", options_for_select(City.all.map{|city| city.name})  %>
         </div>
         <%= button_tag "Next", type: "button", class: "btn btn-flat",
           data: {
@@ -31,7 +28,11 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-2">
-        <h1>STEP 2</h1>
+        <h1>I want to go to the...</h1>
+        <% ["mountain", "river", "city"].each do |stops| %>
+          <%= label_tag "stops_#{stops}", stops %>
+          <%= check_box_tag "stopss[]", stops %>
+        <% end %>
         <%= button_tag "Next", type: "button", class: "btn btn-flat",
           data: {
             action: "click->wizard#nextStep",
@@ -40,7 +41,11 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-3">
-        <h1>STEP 3</h1>
+        <h1>When I travel I like...</h1>
+        <% ["party", "tourism", "museums"].each do |stops| %>
+          <%= label_tag "stops_#{stops}", stops %>
+          <%= check_box_tag "stopss[]", stops %>
+        <% end %>
         <%= button_tag "Search", type: "submit", class: "btn btn-flat" %>
       </div>
     <% end %>
@@ -52,10 +57,10 @@
 
 <div class="home-cards-container">
 
-  <div class="container">
-    <h1 id="home-header">How it works?</h1>
     <div>
-      <%= image_tag 'home-page-route.png', class: "home-itinerary-image" %>
+      <div class="container">
+        <h1 id="home-header">How does Travelsy work?</h1>
+          <%= image_tag 'home-page-route.png', class: "home-itinerary-image" %>
     </div>
     <div class="home-headers">
     <h2>Not sure where to go?</h2>
