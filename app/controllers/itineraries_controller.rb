@@ -15,12 +15,12 @@ class ItinerariesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { stop: stop })
       }
     end
-
   end
 
   def new
     @city = City.find(params[:city_id])
     @itinerary = Itinerary.new
+    @itinerary.stops.build
   end
 
   def create
@@ -29,7 +29,7 @@ class ItinerariesController < ApplicationController
     @itinerary.city = @city
     @itinerary.user = current_user
     if @itinerary.save
-      redirect_to root_path
+      redirect_to new_itinerary_stop_path(@itinerary)
     else
       render :new
     end
