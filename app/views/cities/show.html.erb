@@ -4,7 +4,9 @@
       <div class="cs-description" >
             <h1>Best Itineraries For  <%= @city.name %> </h1>
             <h3>You are almost there </h3>
+
       </div>
+
     </div>
 <% else %>
   <div class='city-show-banner' style = "background-image:   url('https://source.unsplash.com/1440x560/?<%= @city.name %>')" >
@@ -14,11 +16,10 @@
       </div>
   </div>
 <% end %>
-
+  <%= link_to "Create an Itinerary", new_city_itinerary_path(@city), class: "btn-flat btn-create-itinerary"%>
 
 
 <div class="cities-main-container">
-
   <div class="filters">
     <p> Filters</p>
 <div class="interests">
