@@ -3,21 +3,9 @@
   <div class="form-new">
       <%= simple_form_for [ @city, @itinerary ], html: {class: "grid"} do |f| %>
         <%= f.input :days %>
-        <%= f.input :content %>
-        <div class="stops-input-fields">
-        <h4>Create your stop</h4>
-        <%= f.simple_fields_for :stops do |stops| %>
-          <%= stops.input :title %>
-          <%= stops.input :day %>
-          <%= stops.input :category %>
-          <%= stops.input :price %>
-          <%= stops.input :address %>
-          <%= stops.input :content %>
-          <%=  %>
-         <% end %>
-         </div>
+        <%= f.input :content, as: :text %>
         <%= f.submit "Submit", class: "btn-new-itinerary" %>
       <% end %>
-      <img src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="map">
+      <img src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="picture of someone holding a map">
   </div>
 </div>

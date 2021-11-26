@@ -29,7 +29,7 @@ class ItinerariesController < ApplicationController
     @itinerary.city = @city
     @itinerary.user = current_user
     if @itinerary.save
-      redirect_to root_path
+      redirect_to new_itinerary_stop_path(@itinerary)
     else
       render :new
     end
