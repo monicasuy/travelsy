@@ -15,12 +15,12 @@ class ItinerariesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { stop: stop })
       }
     end
-
   end
 
   def new
     @city = City.find(params[:city_id])
     @itinerary = Itinerary.new
+    @itinerary.stops.build
   end
 
   def create
