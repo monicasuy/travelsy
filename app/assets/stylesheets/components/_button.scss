@@ -27,6 +27,7 @@
 .btn-signup:hover {
   background: #FF6767;
   color: white;
+  text-decoration: none;
 }
 
 .btn-new-itinerary,
@@ -52,4 +53,10 @@
   text-decoration: none;
   color:white;
   background-color: #D83A56;
+}
+
+.btn-create-itinerary {
+  width: fit-content;
+  margin-left: 1200px;
+  padding: 10px;
 }
