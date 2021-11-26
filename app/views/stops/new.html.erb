@@ -1,0 +1,16 @@
+<div class="container new-itinerary-container">
+  <h1>Add your itinerary stops</h1>
+  <div class="form-new">
+  <%= simple_form_for [ @itinerary, @stop ], html: {class: "grid"} do |stops|%>
+    <%= stops.input :title %>
+    <%= stops.input :day, collection: @days %>
+    <%= stops.input :category, collection: ['Views', 'Monuments', 'Neighborhoods', 'Museums', 'Sports'] %>
+    <%= stops.input :price %>
+    <%= stops.input :address %>
+    <%= stops.input :content, as: :text %>
+    <%= stops.submit "Add another stop", class: "btn-new-itinerary" %>
+    <%= link_to "Finish", city_itinerary_path(@itinerary.city, @itinerary), class: "btn-new-stop" %>
+    <% end %>
+    <img src="https://images.pexels.com/photos/2563984/pexels-photo-2563984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+  </div>
+</div>

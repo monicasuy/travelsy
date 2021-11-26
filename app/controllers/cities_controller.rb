@@ -2,6 +2,7 @@ class CitiesController < ApplicationController
 
   def index
     @cities = City.all
+    @barcelona = City.find_by_name("Barcelona")
   end
 
   def show

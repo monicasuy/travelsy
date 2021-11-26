@@ -25,19 +25,6 @@
   color: white;
 }
 
-.main-container {
-  display: flex;
-  justify-content: left;
-  align-items:flex-start;
-  margin-top: 50px;
-  padding-left: 5px;
-}
-
-.container {
-  margin-left: 25px;
-  width: 960;
-}
-
 
 .itinerary-cards {
   display: grid;
@@ -67,6 +54,14 @@
 
 
 
+
+.cities-container {
+  margin-left: 25px;
+  width: 960;
+}
+
+
+
 .icons {
   position: absolute;
   bottom: 5%;
@@ -88,6 +83,7 @@
     font-weight: bold;
   }
 }
+
 
 
 .top-rated {
@@ -113,4 +109,13 @@
 
 .break {
   margin-top:10px;
+}
+
+.cities-main-container {
+  display: flex;
+  justify-content: left;
+  align-items:flex-start;
+  margin-top: 50px;
+  padding-left: 5px;
+  
 }

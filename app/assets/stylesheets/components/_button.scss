@@ -33,6 +33,23 @@
 .btn-new-city,
 .btn-new-review,
 .btn-login,
-.btn-signup {
+.btn-signup,.btn-new-stop {
   padding: 15px 52px;
+}
+
+.btn-new-stop {
+  background-color: #900C3F;
+  color: white;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 20px;
+  border: none;
+}
+
+.btn-new-stop:hover {
+  text-decoration: none;
+  color:white;
+  background-color: #D83A56;
 }
