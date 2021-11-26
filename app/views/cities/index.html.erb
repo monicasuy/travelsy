@@ -1,24 +1,49 @@
-<div class="home-banner wizard">
-  <div class="wizard-steps-container is--step-0">
-    <%= image_tag 'world-travel.svg', class: "world-background"%>
+<div class="home-banner wizard" data-controller="wizard">
+  <div class="wizard-steps-container is--step-0" data-wizard-target="container">
+    <%= image_tag 'world.svg', class: "world-background"%>
+    <%= form_tag city_path(@barcelona), method: :get do %>
 
-    <div class="wizard-steps-step wizard-steps-step-0">
-      <h1>Travelsy</h1>
-      <p>Squeeze the most out of your destination</p>
-      <%= link_to "Find your next trip", "#", class: "btn btn-flat" %>
-    </div>
+      <div class="wizard-steps-step wizard-steps-step-0">
+        <h1>Travelsy</h1>
+        <p>Travel made easy,<br>
+        Squeeze the most out of your destination</p>
+        <%= button_tag "Find your next trip", type: "button", class: "btn btn-flat",
+          data: {
+            action: "click->wizard#nextStep",
+            next_step: 1
+          } %>
 
-    <div class="wizard-steps-step wizard-steps-step-1">
-      <h1>STEP 1</h1>
-    </div>
+      </div>
 
-    <div class="wizard-steps-step wizard-steps-step-2">
-      <h1>STEP 2</h1>
-    </div>
+      <div class="wizard-steps-step wizard-steps-step-1">
+        <h1>STEP 1</h1>
+        <div class="col-6">
+          <%= text_field_tag :cities,
+            params[:cities],
+            class: "form-control",
+            placeholder: "Find a movie" %>
+        </div>
+        <%= button_tag "Next", type: "button", class: "btn btn-flat",
+          data: {
+            action: "click->wizard#nextStep",
+            next_step: 2,
+          } %>
+      </div>
 
-    <div class="wizard-steps-step wizard-steps-step-3">
-      <h1>STEP 3</h1>
-    </div>
+      <div class="wizard-steps-step wizard-steps-step-2">
+        <h1>STEP 2</h1>
+        <%= button_tag "Next", type: "button", class: "btn btn-flat",
+          data: {
+            action: "click->wizard#nextStep",
+            next_step: 3,
+          } %>
+      </div>
+
+      <div class="wizard-steps-step wizard-steps-step-3">
+        <h1>STEP 3</h1>
+        <%= button_tag "Search", type: "submit", class: "btn btn-flat" %>
+      </div>
+    <% end %>
   </div>
 </div>
 
@@ -30,7 +55,7 @@
   <div class="container">
     <h1 id="home-header">How it works?</h1>
     <div>
-      <%= image_tag 'home-page-route.svg', class: "home-itinerary-image" %>
+      <%= image_tag 'home-page-route.png', class: "home-itinerary-image" %>
     </div>
     <div class="home-headers">
     <h2>Not sure where to go?</h2>

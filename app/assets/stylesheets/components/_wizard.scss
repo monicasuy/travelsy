@@ -2,7 +2,7 @@
   --step-width: 1600px;
   --step-height: 800px;
   --left-gap: calc((100vw - var(--step-width)) / 2);
-  --bg-color: #7FCBAE;
+  --bg-color: #F7F6F2;
 }
 
 
@@ -34,7 +34,7 @@
   width: var(--step-width);
 
   transform-origin: calc((var(--step-height) * 2 + var(--step-width)) / 2) calc((var(--step-height) * 2 + var(--step-width)) / 2);
-  border: 2px solid black;
+  // border: 2px solid black;
 
   position: absolute;
   display: flex;
