@@ -3,16 +3,19 @@
     <h2> Just one more thing</h2>
     <div class="itinerary-content">
     <%= @itinerary.content %>
-      <% @stops.first(@itinerary.days).each do |stop| %>
-      <div class="card-product">
-        <img src="https://source.unsplash.com/1600x900/?<%= stop.title %>" alt="">
-        <div class="card-product-infos">
-        <h2 class="day-header">Day <%= stop.day %></h2>
-          <ul>
-            <li><%= stop.title %></li>
-          </ul>
-        </div>
-      </div>
+      <% @days.each do |day| %>
+          <div class="card-product">
+            <% pic =  @stops.where(day: day)&.first&.photo&.key %>
+            <%= cl_image_tag pic unless pic.nil?%>
+            <div class="card-product-infos">
+              <h2 class="day-header">Day <%= day %></h2>
+              <% @stops.where(day: day).each do |stop| %>
+                <ul>
+                  <li><%= stop.title %></li>
+                </ul>
+              <% end %>
+            </div>
+          </div>
       <% end %>
     </div>
   </div>
@@ -22,6 +25,3 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 </div>
-<%# <div class="container"> %>
-  <%#= link_to 'Download', '#', class: 'btn-flat' %>
-<%# </div> %>
