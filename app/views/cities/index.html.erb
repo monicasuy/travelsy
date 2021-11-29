@@ -16,6 +16,7 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-1">
+
         <h1>I would like to got to...</h1>
         <div class="col-6">
           <%= select_tag "department", options_for_select(City.all.map{|city| city.name})  %>
@@ -48,9 +49,11 @@
             action: "click->wizard#previousStep",
             previous_step: 1,
           } %>
+
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-3">
+        <div class="banner-body">
         <h1>When I travel I like...</h1>
         <% ["party", "tourism", "museums"].each do |stops| %>
           <%= label_tag "stops_#{stops}", stops %>
@@ -63,12 +66,10 @@
           } %>
         <%= button_tag "Search", type: "submit", class: "btn btn-flat" %>
       </div>
+      </div>
     <% end %>
   </div>
 </div>
-
-
-
 
 <div class="home-cards-container">
 
