@@ -30,7 +30,6 @@ User.create!(
   password: 'password'
 )
 
-
 User.create!(
   first_name: 'Diana',
   last_name: 'Barroso',
@@ -100,7 +99,17 @@ stops = [
   { name: "Casa Batlló",
   category: "monuments",
   address: "P.º de Gracia, 43, 08007 Barcelona"
-  } ]
+  },
+
+  { name: "Barcelonetta",
+  category: "partying",
+  address: "Passeig Marítim de la Barceloneta, 08003 Barcelona" },
+
+  { name: "Paella Making",
+  category: "eating out",
+  address: "Carrer del Torrent d'En Vidalet, 26, Barcelona"
+  }
+]
 
 cities.each do |city_name|
    city = City.create!(
@@ -109,10 +118,10 @@ cities.each do |city_name|
 
  # Seeds for Itinerary
 
-  5.times do
+  10.times do
     new_itinerary = Itinerary.create!(
         content: Faker::Quote.matz,
-        days: Faker::Number.between(from: 2, to: 5),
+        days: Faker::Number.between(from: 3, to: 5),
         upvotes: Faker::Number.between(from: 50, to: 1000),
         city: city,
         user: new_user

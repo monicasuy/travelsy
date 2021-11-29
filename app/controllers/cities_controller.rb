@@ -6,6 +6,7 @@ class CitiesController < ApplicationController
   end
 
   def show
+
     @city = City.find(params[:id])
     city = City.find_by(name: params[:city])
     stops = Stop.where(category: params[:stops])
@@ -18,10 +19,10 @@ class CitiesController < ApplicationController
       @itineraries = Itinerary.all
     end
 
-    @top_three = @itineraries.order("upvotes ASC").order("days DESC").first(3)
+    @top_three = @itineraries.order("upvotes DESC").first(3).sort_by(&:days)
+
     @top_three_day = @itineraries.where(days: 3).order("upvotes ASC").first(3)
     @top_four_day = @itineraries.where(days: 4).order('upvotes ASC').first(3)
-
 
   end
 
@@ -41,6 +42,6 @@ class CitiesController < ApplicationController
   private
 
   def city_params
-    params.require(:city).permit(:name, :photo)
+    params.require(:city).permit(:name)
   end
 end

@@ -19,7 +19,6 @@
 
   <%= link_to "Add an Itinerary", new_city_itinerary_path(@city), class: "btn-flat btn-create-itinerary"%>
 
-  <%= link_to "Create an Itinerary", new_city_itinerary_path(@city), class: "btn-flat btn-create-itinerary"%>
 <div class="cities-main-container">
   <div class="filters">
     <p> Filters</p>
@@ -38,7 +37,7 @@
 
     <label class="container">
       <input type="checkbox">
-      <span class="checkmark"></span> Tourism
+      <span class="checkmark"></span> Sightseeing
     </label>
 
 
@@ -87,10 +86,6 @@
 
 
 
-
-
-
-
 <div class="container cities-container">
     <div class='top-rated'>
 
@@ -107,7 +102,6 @@
               <div class= "icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
-                <p class="price">$<%= itinerary.total_cost %></p>
               </div>
           </div>
           <% end  %>
@@ -132,7 +126,6 @@
               <div class= "icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
-                <p class="price">$<%= itinerary.total_cost %></p>
               </div>
           </div>
           <% end  %>
@@ -156,7 +149,6 @@
               <div class="icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
-                <p class="price">$<%= itinerary.total_cost %></p>
               </div>
           </div>
           <% end  %>
