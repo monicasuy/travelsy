@@ -5,6 +5,7 @@ export default class extends Controller {
 
   nextStep(event) {
     const nextStep = event.target.dataset.nextStep;
+    const previousStep = event.target.dataset.previousStep;
     const actualStep = nextStep - 1;
 
     // remove "is--step-0" from container
