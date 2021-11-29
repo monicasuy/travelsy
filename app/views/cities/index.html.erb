@@ -16,10 +16,17 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-1">
+        <div class="banner-body">
 
-        <h1>I would like to got to...</h1>
-        <div class="col-6">
-          <%= select_tag "department", options_for_select(City.all.map{|city| city.name})  %>
+          <h1>I would like to go to</h1>
+          <div class="dropdown-col-6">
+            <%= select_tag "city", options_for_select(City.all.map{|city| city.name})  %>
+          </div>
+          <%= button_tag "Next", type: "button", class: "btn btn-flat",
+            data: {
+              action: "click->wizard#nextStep",
+              next_step: 2,
+            } %>
         </div>
         <%= button_tag "Next", type: "button", class: "btn btn-flat",
           data: {
