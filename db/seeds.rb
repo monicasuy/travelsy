@@ -30,7 +30,6 @@ User.create!(
   password: 'password'
 )
 
-
 User.create!(
   first_name: 'Diana',
   last_name: 'Barroso',
