@@ -2,7 +2,7 @@
  <% if @city.name == "Barcelona" %>
   <div class='city-show-banner' style = "background-image: url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')" >
       <div class="cs-description" >
-            <h1>Best Itineraries For  <%= @city.name %> </h1>
+            <h1>Best itineraries for  <%= @city.name %> </h1>
 
             <h4>You are almost there </h4>
       </div>
@@ -11,12 +11,12 @@
 <% else %>
   <div class='city-show-banner' style = "background-image:   url('https://source.unsplash.com/1440x560/?<%= @city.name %>')" >
       <div class="cs-description" >
-            <h1>Best Itineraries For  <%= @city.name %> </h1>
+            <h1>Best itineraries for  <%= @city.name %> </h1>
             <h3>You are almost there </h3>
       </div>
   </div>
 <% end %>
-  <%= link_to "Create an Itinerary", new_city_itinerary_path(@city), class: "btn-flat btn-create-itinerary"%>
+  <%= link_to "Add an Itinerary", new_city_itinerary_path(@city), class: "btn-flat btn-create-itinerary"%>
 
 
 <div class="cities-main-container">
@@ -114,7 +114,7 @@
 
 
   <div class = 'three-day'>
-      <h2 class="cities-headers">Best 3 Day Itineraries </h2>
+      <h2 class="cities-headers">Best 3-Day itineraries </h2>
 
       <div class="itinerary-cards">
          <% @city.itineraries.order('upvotes DESC').first(3).each_with_index do |itinerary,index| %>
@@ -137,7 +137,7 @@
 
   <div class = "four-day">
 
-    <h2 class="cities-headers">Best 4 Day Itineraries </h2>
+    <h2 class="cities-headers">Best 4-Day itineraries </h2>
 
     <div class="itinerary-cards">
          <% @city.itineraries.order('upvotes DESC').first(3).each_with_index do |itinerary, index| %>

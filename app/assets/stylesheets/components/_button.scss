@@ -7,12 +7,13 @@
 .btn-new-city,
 .btn-new-review,
 .btn-login,
-.btn-signup {
+.btn-signup,
+.btn-create-itinerary {
   color: white;;
   background: #FF5F7E;;
   text-align: center;
   border-radius: 5px;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   display: inline-block;
   margin-top: 20px;
@@ -24,7 +25,8 @@
 .btn-new-city:hover,
 .btn-new-review:hover,
 .btn-login:hover,
-.btn-signup:hover {
+.btn-signup:hover,
+.btn-create-itinerary:hover {
   background: #FF6767;
   color: white;
   text-decoration: none;
@@ -37,6 +39,7 @@
 .btn-signup,.btn-new-stop {
   padding: 15px 52px;
 }
+
 
 .btn-new-stop {
   background-color: #900C3F;
@@ -57,6 +60,9 @@
 
 .btn-create-itinerary {
   width: fit-content;
-  margin-left: 1200px;
   padding: 10px;
+  margin-left: 1206px;
+  margin-right: 20px;
+  margin-bottom: -30px;
+  margin-top: 50px;
 }
