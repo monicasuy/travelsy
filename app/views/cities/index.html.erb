@@ -17,7 +17,7 @@
       <div class="wizard-steps-step wizard-steps-step-1">
         <h1>I would like to got to...</h1>
         <div class="col-6">
-          <%= select_tag "department", options_for_select(City.all.map{|city| city.name})  %>
+          <%= select_tag "city", options_for_select(City.all.map{|city| city.name})  %>
         </div>
         <%= button_tag "Next", type: "button", class: "btn btn-flat",
           data: {
@@ -28,9 +28,9 @@
 
       <div class="wizard-steps-step wizard-steps-step-2">
         <h1>I want to go to the...</h1>
-        <% ["mountain", "river", "city"].each do |stops| %>
+        <% ["beach", "mountain", "city", "desert",].each do |stops| %>
           <%= label_tag "stops_#{stops}", stops %>
-          <%= check_box_tag "stopss[]", stops %>
+          <%= check_box_tag "stops[]", stops %>
         <% end %>
         <%= button_tag "Next", type: "button", class: "btn btn-flat",
           data: {
@@ -39,11 +39,12 @@
           } %>
       </div>
 
+
       <div class="wizard-steps-step wizard-steps-step-3">
         <h1>When I travel I like...</h1>
-        <% ["party", "tourism", "museums"].each do |stops| %>
+        <% ["partying", "sightseeing", "eating out",].each do |stops| %>
           <%= label_tag "stops_#{stops}", stops %>
-          <%= check_box_tag "stopss[]", stops %>
+          <%= check_box_tag "stops[]", stops %>
         <% end %>
         <%= button_tag "Search", type: "submit", class: "btn btn-flat" %>
       </div>
