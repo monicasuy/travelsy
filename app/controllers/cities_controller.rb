@@ -7,6 +7,20 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    city = City.find_by(name: params[:city])
+    stops = Stop.where(category: params[:stops])
+
+    if city
+      @itineraries = Itinerary.where(city: city)
+    elsif city && stops
+      @itineraries = Itinerary.where(city: city).where(stops: stop)
+    else
+      @itineraries = Itinerary.all
+    end
+
+    @top_three = @itineraries.order("upvotes ASC").order("days DESC").first(3)
+    @top_three_day = @itineraries.where(days: 3).order("upvotes ASC").first(3)
+    @top_four_day = @itineraries.where(days: 4).order('upvotes ASC').first(3)
   end
 
   def new
