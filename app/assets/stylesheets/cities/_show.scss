@@ -1,7 +1,7 @@
 
 .city-show-banner {
   height: 560px;
-  color: white;
+  color: #FEF9EF;
   background-size: cover;
   background-position: bottom;
   display: flex;
@@ -9,7 +9,10 @@
 
 }
 .city-show-banner h1 {
-  color: white;
+  color: #FEF9EF;
+  size: 30px;
+  font-size: 42px;
+  margin-bottom: 4px;
 }
 
 
@@ -17,11 +20,10 @@
   margin-left: 200px;
   margin-top: 100px;
   text-shadow: 1px 1px 3px rgba(0,0,0,1);
-
 }
 
 .cs-description h1 {
-  color: white;
+  color: #FEF9EF;
 }
 
 
@@ -33,33 +35,28 @@
   a:hover {
   text-decoration: none;
   }
-
 }
 
 .itinerary-card {
   flex-direction: column;
-  height: 210px;
+  height: 225px;
   width: 320px;
   position: relative;
   border-radius: 7px;
-  font-size: 25px;
-  color:white;
+  font-size: 20px;
+  color: #FEF9EF;
   text-shadow: 1px 1px 3px rgba(0,0,0,1);
+  margin-bottom: 15px;
   h1 {
-    color:white;
+    color: #FEF9EF;
     text-shadow: 1px 1px 3px rgba(0,0,0,1);
     }
 }
-
-
-
 
 .cities-container {
   margin-left: 25px;
   width: 960;
 }
-
-
 
 .icons {
   position: absolute;
@@ -67,19 +64,18 @@
   left: 5%
 }
 
-
-
 .filters {
-  width:fit-content;
-  background: #FFFCFC;
-  border: 2px solid #9B9595;
+  width: 180px;
+  background: #FEF9EF;
+  border: 1px solid #9B9595;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 14px;
+  border-radius: 7px;
   padding: 20px;
-  margin-top: 70px;
+  margin-top: 60px;
   p {
     font-weight: bold;
+    color: #404347;
   }
 }
 
@@ -115,6 +111,6 @@
   justify-content: left;
   align-items:flex-start;
   margin-top: 50px;
-  padding-left: 5px;
+  padding-left: 45px;
 
 }
