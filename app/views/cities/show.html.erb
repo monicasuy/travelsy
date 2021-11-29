@@ -16,9 +16,8 @@
       </div>
   </div>
 <% end %>
+
   <%= link_to "Create an Itinerary", new_city_itinerary_path(@city), class: "btn-flat btn-create-itinerary"%>
-
-
 <div class="cities-main-container">
   <div class="filters">
     <p> Filters</p>
@@ -105,7 +104,9 @@
 
               <div class= "icons">
                 <%= itinerary.upvotes %>
+                <%= itinerary.total_cost %>
                 <i class="fas fa-thumbs-up"></i>
+
               </div>
           </div>
           <% end  %>
