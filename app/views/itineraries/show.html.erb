@@ -8,7 +8,7 @@
             <% pic =  @stops.where(day: day)&.first&.photo&.key %>
             <%= cl_image_tag pic unless pic.nil?%>
             <div class="card-product-infos">
-            <h2 class="day-header">Day <%= day %></h2>
+              <h2 class="day-header">Day <%= day %></h2>
               <% @stops.where(day: day).each do |stop| %>
                 <ul>
                   <li><%= stop.title %></li>
@@ -24,7 +24,4 @@
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-</div>
-<div class="container">
-  <%= link_to 'Download', '#', class: 'btn-flat' %>
 </div>
