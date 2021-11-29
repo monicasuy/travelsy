@@ -7,4 +7,13 @@ class Itinerary < ApplicationRecord
                                                 wrong_length: "Description should be between 10 and 2400 characters" }
   validates :days, presence: true, inclusion: { within: 1..5 }
   accepts_nested_attributes_for :stops
+
+  def total_cost
+    total_price = 0
+    self.stops.each do |stop|
+      total_price += stop.price
+    end
+    return total_price
+  end
+
 end
