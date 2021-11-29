@@ -16,6 +16,6 @@ class StopsController < ApplicationController
   private
 
   def strong_params
-    params.require(:stop).permit(:title, :content, :day, :price, :category, :address)
+    params.require(:stop).permit(:title, :content, :day, :price, :category, :address, :photo)
   end
 end
