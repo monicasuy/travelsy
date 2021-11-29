@@ -8,6 +8,11 @@ class ItinerariesController < ApplicationController
     @city = City.find(params[:city_id])
     @itinerary = Itinerary.find(params[:id])
     @stops = @itinerary.stops.order('day ASC')
+    @days = [*1..@itinerary.days]
+    @photos = []
+    @stops.each do |stop|
+      @photos << stop.photo.key
+    end
     @markers = @stops.geocoded.map do |stop|
       {
         lat: stop.latitude,
