@@ -11,8 +11,9 @@ class Itinerary < ApplicationRecord
   def total_cost
     total_price = 0
     self.stops.each do |stop|
-      total_price+=stop.price
+      total_price += stop.price
     end
+    return total_price
   end
 
 end

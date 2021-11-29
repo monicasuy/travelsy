@@ -90,7 +90,7 @@
 
 
 <div class="container cities-container">
-    <div class = 'top-rated'>
+    <div class='top-rated'>
 
       <h2 class="cities-headers">Top Rated Itineraries </h2>
 
@@ -104,9 +104,8 @@
 
               <div class= "icons">
                 <%= itinerary.upvotes %>
-                <%= itinerary.total_cost %>
                 <i class="fas fa-thumbs-up"></i>
-
+                <p class="price">$<%= itinerary.total_cost %></p>
               </div>
           </div>
           <% end  %>
@@ -115,10 +114,10 @@
 
     </div>
 
-    <hr class = "break" style="width:50%; text-align:center; margin-left:250px, height: 2px; ">
+    <hr class="break" style="width:50%; text-align:center; margin-left:250px, height: 2px; ">
 
 
-  <div class = 'three-day'>
+  <div class='three-day'>
       <h2 class="cities-headers">Best 3 Day Itineraries </h2>
 
 
@@ -130,6 +129,7 @@
               <div class= "icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
+                <p class="price">$<%= itinerary.total_cost %></p>
               </div>
           </div>
           <% end  %>
@@ -138,11 +138,11 @@
 
    </div>
 
-   <hr class = "break" style="width:50%; text-align:center; margin-left:250px">
+   <hr class="break" style="width:50%; text-align:center; margin-left:250px">
 
 
 
-  <div class = "four-day">
+  <div class="four-day">
 
     <h2 class="cities-headers">Best 4 Day Itineraries </h2>
 
@@ -150,9 +150,10 @@
          <% @top_four_day.each_with_index do |itinerary, index| %>
          <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
           <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
-              <div class= "icons">
+              <div class="icons">
                 <%= itinerary.upvotes %>
                 <i class="fas fa-thumbs-up"></i>
+                <p class="price">$<%= itinerary.total_cost %></p>
               </div>
           </div>
           <% end  %>
