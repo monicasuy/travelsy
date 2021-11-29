@@ -27,8 +27,8 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-2">
-        <h1>I want to go to the...</h1>
-        <% ["beach", "mountain", "city", "desert",].each do |stops| %>
+        <h1>I like to see...</h1>
+        <% ["monuments", "views", "sports", "museums"].each do |stops| %>
           <%= label_tag "stops_#{stops}", stops %>
           <%= check_box_tag "stops[]", stops %>
         <% end %>
@@ -42,7 +42,7 @@
 
       <div class="wizard-steps-step wizard-steps-step-3">
         <h1>When I travel I like...</h1>
-        <% ["partying", "sightseeing", "eating out",].each do |stops| %>
+        <% ["partying", "eating", "hiking"].each do |stops| %>
           <%= label_tag "stops_#{stops}", stops %>
           <%= check_box_tag "stops[]", stops %>
         <% end %>
