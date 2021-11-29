@@ -17,7 +17,8 @@ class ItinerariesController < ApplicationController
       {
         lat: stop.latitude,
         lng: stop.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { stop: stop })
+        info_window: render_to_string(partial: "info_window", locals: { stop: stop }),
+        image_url: helpers.asset_url('marker.svg')
       }
     end
   end
