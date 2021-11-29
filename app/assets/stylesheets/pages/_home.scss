@@ -24,3 +24,23 @@ h3 {
 p {
   color: #404347;
 }
+.banner-body {
+  margin-right: -125px;
+  text-align: center;
+}
+
+select {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 2px 13px;
+  border-color: #404347;
+  background-color: #FEF9EF;
+  color: #404347;
+  margin-top: 25px;
+  border-radius: 4px;
+}
+
+#stops {
+  width: 15px;
+  height: 15px;
+}
