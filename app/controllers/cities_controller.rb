@@ -21,6 +21,8 @@ class CitiesController < ApplicationController
     @top_three = @itineraries.order("upvotes ASC").order("days DESC").first(3)
     @top_three_day = @itineraries.where(days: 3).order("upvotes ASC").first(3)
     @top_four_day = @itineraries.where(days: 4).order('upvotes ASC').first(3)
+
+
   end
 
   def new
