@@ -16,7 +16,7 @@
 
       <div class="wizard-steps-step wizard-steps-step-1">
         <div class="banner-body">
-          <h1>I would like to go to</h1>
+          <h1>I would like to go to...</h1>
           <div class="col-6">
             <%= select_tag "city", options_for_select(City.all.map{|city| city.name})  %>
           </div>
@@ -35,9 +35,9 @@
 
       <div class="wizard-steps-step wizard-steps-step-2">
           <div class="banner-body">
-          <h1>I want to go to the</h1>
+          <h1>I want to see </h1>
             <div class="mycheckboxes">
-              <% ["beach", "mountain", "city", "desert","neighborhoods"].each do |stops| %>
+              <% ["monuments", "iconic buildings", "museums", "restaurants","neighborhoods"].each do |stops| %>
               <div class="mycheck">
                 <%= label_tag "stops_#{stops}", stops %>
                 <%= check_box_tag "stops[]", stops %>
@@ -62,7 +62,7 @@
       <div class="wizard-steps-step wizard-steps-step-3">
         <div class="banner-body">
         <h1>When I travel I like...</h1>
-        <% ["partying", "sightseeing", "eating out"].each do |stops| %>
+        <% ["partying", "drinking", "hiking", "relaxing" ].each do |stops| %>
           <%= label_tag "stops_#{stops}", stops %>
           <%= check_box_tag "stops[]", stops %>
         <% end %>
