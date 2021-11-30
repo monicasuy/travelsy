@@ -37,10 +37,10 @@
           <div class="banner-body">
           <h1>I want to see </h1>
             <div class="mycheckboxes">
-              <% ["monuments", "iconic buildings", "museums", "restaurants","neighborhoods"].each do |stops| %>
+              <% Itinerary::TYPE.each do |type| %>
               <div class="mycheck">
-                <%= label_tag "stops_#{stops}", stops %>
-                <%= check_box_tag "stops[]", stops %>
+                <%= label_tag "stops_#{type}", type %>
+                <%= check_box_tag "keywords[]", type %>
             </div>
               <% end %>
             </div>
@@ -61,9 +61,9 @@
       <div class="wizard-steps-step wizard-steps-step-3">
         <div class="banner-body">
         <h1>When I travel I like...</h1>
-        <% ["partying", "drinking", "hiking", "relaxing" ].each do |stops| %>
-          <%= label_tag "stops_#{stops}", stops %>
-          <%= check_box_tag "stops[]", stops %>
+        <% Itinerary::ACTIVITIES.each do |activity| %>
+          <%= label_tag "stops_#{activity}", activity %>
+          <%= check_box_tag "keywords[]", activity %>
         <% end %>
         <div class="btn-container">
           <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
