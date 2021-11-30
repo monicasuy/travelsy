@@ -20,15 +20,15 @@
           <div class="col-6">
             <%= select_tag "city", options_for_select(City.all.map{|city| city.name})  %>
           </div>
-          <%= button_tag "Next", type: "button", class: "btn btn-flat",
-            data: {
-              action: "click->wizard#nextStep",
-              next_step: 2,
-            } %>
-            <%= button_tag "Previous", type: "button", class: "btn btn-flat",
+            <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
               data: {
               action: "click->wizard#previousStep",
               previous_step: 0,
+            } %>
+            <%= button_tag "Next →", type: "button", class: "btn btn-wheel-next",
+              data: {
+              action: "click->wizard#nextStep",
+              next_step: 2,
             } %>
         </div>
       </div>
@@ -41,21 +41,20 @@
               <div class="mycheck">
                 <%= label_tag "stops_#{stops}", stops %>
                 <%= check_box_tag "stops[]", stops %>
-              </div>
+            </div>
               <% end %>
             </div>
-            <%= button_tag "Next", type: "button", class: "btn btn-flat",
+            <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
+              data: {
+              action: "click->wizard#previousStep",
+              previous_step: 1,
+            } %>
+            <%= button_tag "Next →", type: "button", class: "btn btn-wheel-next",
             data: {
               action: "click->wizard#nextStep",
               next_step: 3,
             } %>
           </div>
-          <%= button_tag "Previous", type: "button", class: "btn btn-flat",
-              data: {
-              action: "click->wizard#previousStep",
-              previous_step: 1,
-            } %>
-
       </div>
 
 
@@ -66,14 +65,16 @@
           <%= label_tag "stops_#{stops}", stops %>
           <%= check_box_tag "stops[]", stops %>
         <% end %>
-      <%= button_tag "Previous", type: "button", class: "btn btn-flat",
-              data: {
-              action: "click->wizard#previousStep",
-              previous_step: 2,
-            } %>
-        <%= button_tag "Search", type: "submit", class: "btn btn-flat" %>
+        <div class="btn-container">
+          <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
+                data: {
+                  action: "click->wizard#previousStep",
+                previous_step: 2,
+              } %>
+          <%= button_tag "Discover", type: "submit", class: "btn btn-wheel-next" %>
+        </div>
       </div>
-      </div>
+    </div>
     <% end %>
 
   </div>

@@ -9,7 +9,9 @@
 .btn-new-review,
 .btn-login,
 .btn-signup,
-.btn-create-itinerary {
+.btn-create-itinerary,
+.btn-wheel,
+.btn-wheel-next {
   color: white;;
   background: #FF5F7E;;
   text-align: center;
@@ -27,7 +29,9 @@
 .btn-new-review:hover,
 .btn-login:hover,
 .btn-signup:hover,
-.btn-create-itinerary:hover {
+.btn-create-itinerary:hover,
+.btn-wheel:hover,
+.btn-wheel-next:hover {
   background: #FF6767;
   color: white;
   text-decoration: none;
@@ -37,7 +41,8 @@
 .btn-new-city,
 .btn-new-review,
 .btn-login,
-.btn-signup,.btn-new-stop {
+.btn-signup,
+.btn-new-stop {
   padding: 15px 52px;
 }
 
@@ -66,4 +71,11 @@
   margin-right: 20px;
   margin-bottom: -30px;
   margin-top: 50px;
+}
+
+.btn-wheel {
+  padding: 6px 14px !important;
+}
+.btn-wheel-next {
+  padding: 6px 28px;
 }
