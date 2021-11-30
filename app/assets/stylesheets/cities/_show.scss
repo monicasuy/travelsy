@@ -58,11 +58,6 @@
   width: 960;
 }
 
-.icons {
-  position: absolute;
-  bottom: 5%;
-  left: 5%
-}
 
 .filters {
   width: 180px;
@@ -115,10 +110,23 @@
 
 }
 
+.itinerary-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 180px;
+  margin-right: 20px;
+  margin-left: 20px;
+  align-items: center;
 
-.price {
+}
+
+.itinerary-footer-top {
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  color: white;
-  left: 100px;
+  top: 30px;
+}
 
+.itinerary-footer-top h2 {
+  margin-left: 180px;
 }

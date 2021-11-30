@@ -23,13 +23,7 @@
   <div class="filters">
     <p> Filters</p>
 <div class="interests">
-    <p>Interest </p>
-      <label class="container">
-        <input type="checkbox">
-        <span class="checkmark"></span> Art
-
-      </label>
-
+    <p>Activities </p>
       <label class="container">
         <input type="checkbox">
         <span class="checkmark"></span> Eating Out
@@ -37,7 +31,7 @@
 
     <label class="container">
       <input type="checkbox">
-      <span class="checkmark"></span> Sightseeing
+      <span class="checkmark"></span> Hiking
     </label>
 
 
@@ -55,24 +49,22 @@
 
     <label class="container">
     <input type="checkbox">
-    <span class="checkmark"></span> Beach </label>
+    <span class="checkmark"></span> Monuments </label>
 
     <label class="container">
     <input type="checkbox">
-    <span class="checkmark"></span> Mountain
+    <span class="checkmark"></span> Museums
 
   </label>
 
   <label class="container">
     <input type="checkbox">
-    <span class="checkmark"></span> City
-
-  </label>
+    <span class="checkmark"></span>Neighborhoods</label>
 
 
   <label class="container">
     <input type="checkbox">
-    <span class="checkmark"></span> Desert
+    <span class="checkmark"></span> Views
 
   </label>
   </div>
@@ -95,14 +87,24 @@
          <% @top_three.each do |itinerary| %>
          <%= link_to  city_itinerary_path(@city, itinerary) do %>
           <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
-              <div class="days">
-                <h1><strong><%= itinerary.days %> days </strong></h1>
-              </div>
 
+             <h1 class="days"><strong><%= itinerary.days %> days </strong></h1>
+
+             <div class="itinerary-footer-top">
               <div class= "icons">
-                <%= itinerary.upvotes %>
-                <i class="fas fa-thumbs-up"></i>
+                  <%= itinerary.upvotes %>
+                  <i class="fas fa-thumbs-up"></i>
               </div>
+               <div class="cost">
+                   <% if itinerary.total_cost > 50  %>
+                      <h2 class="price"> €€€ </h2>
+                    <% elsif itinerary.total_cost > 25 && itinerary.total_cost< 50 %>
+                      <h2 class="price"> €€ </h2>
+                    <% else %>
+                      <h2 class="price"> € </h2>
+                    <% end %>
+               </div>
+            </div>
           </div>
           <% end  %>
           <% end  %>
@@ -117,17 +119,26 @@
       <h2 class="cities-headers">Best 3 Day Itineraries </h2>
 
 
-
-
       <div class="itinerary-cards">
          <% @top_three_day.each_with_index do |itinerary,index| %>
          <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
-         <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#=itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
+         <div class ="itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#=itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
+            <div class="itinerary-footer">
               <div class= "icons">
-                <%= itinerary.upvotes %>
-                <i class="fas fa-thumbs-up"></i>
+                  <%= itinerary.upvotes %>
+                  <i class="fas fa-thumbs-up"></i>
               </div>
-          </div>
+               <div class="cost">
+                   <% if itinerary.total_cost > 50  %>
+                      <h2 class="price"> €€€ </h2>
+                    <% elsif itinerary.total_cost > 25 && itinerary.total_cost< 50 %>
+                      <h2 class="price"> €€ </h2>
+                    <% else %>
+                      <h2 class="price"> € </h2>
+                    <% end %>
+               </div>
+            </div>
+         </div>
           <% end  %>
           <% end  %>
       </div>
@@ -145,11 +156,22 @@
     <div class="itinerary-cards">
          <% @top_four_day.each_with_index do |itinerary, index| %>
          <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
-          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
-              <div class="icons">
-                <%= itinerary.upvotes %>
-                <i class="fas fa-thumbs-up"></i>
+          <div class ="itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
+            <div class="itinerary-footer">
+              <div class= "icons">
+                  <%= itinerary.upvotes %>
+                  <i class="fas fa-thumbs-up"></i>
               </div>
+               <div class="cost">
+                   <% if itinerary.total_cost > 50  %>
+                      <h2 class="price"> €€€ </h2>
+                    <% elsif itinerary.total_cost > 25 && itinerary.total_cost< 50 %>
+                      <h2 class="price"> €€</h2>
+                    <% else %>
+                      <h2 class="price"> € </h2>
+                    <% end %>
+               </div>
+            </div>
           </div>
           <% end  %>
           <% end  %>

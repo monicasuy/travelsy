@@ -37,7 +37,7 @@
           <div class="banner-body">
           <h1>I want to go to the</h1>
             <div class="mycheckboxes">
-              <% ["beach", "mountain", "city", "desert",].each do |stops| %>
+              <% ["beach", "mountain", "city", "desert","neighborhoods"].each do |stops| %>
               <div class="mycheck">
                 <%= label_tag "stops_#{stops}", stops %>
                 <%= check_box_tag "stops[]", stops %>

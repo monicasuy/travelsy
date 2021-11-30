@@ -11,19 +11,18 @@ class CitiesController < ApplicationController
     city = City.find_by(name: params[:city])
     stops = Stop.where(category: params[:stops])
 
-    if city
+    if city.present?
       @itineraries = Itinerary.where(city: city)
-    elsif city && stops
+    elsif city.present? && stops.any?
       @itineraries = Itinerary.where(city: city).where(stops: stop)
     else
-      @itineraries = Itinerary.all
+      @itineraries = City.find(params[:id]).itineraries
     end
 
     @top_three = @itineraries.order("upvotes DESC").first(3).sort_by(&:days)
 
     @top_three_day = @itineraries.where(days: 3).order("upvotes ASC").first(3)
     @top_four_day = @itineraries.where(days: 4).order('upvotes ASC').first(3)
-
   end
 
   def new
