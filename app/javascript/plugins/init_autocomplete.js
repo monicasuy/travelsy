@@ -6,5 +6,4 @@ const initAutocomplete = () => {
     places({ container: addressInput });
   }
 };
-
 export { initAutocomplete };
