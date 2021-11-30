@@ -5,8 +5,7 @@
 
       <div class="wizard-steps-step wizard-steps-step-0">
         <h1>Travelsy</h1>
-        <p>Travel made easy,<br>
-        Squeeze the most out of your destination</p>
+        <p>Travel made easy</p>
         <%= button_tag "Find your next trip", type: "button", class: "btn btn-flat",
           data: {
             action: "click->wizard#nextStep",
@@ -16,70 +15,80 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-1">
-
-        <h1>I would like to got to...</h1>
-        <div class="col-6">
-          <%= select_tag "department", options_for_select(City.all.map{|city| city.name})  %>
+        <div class="banner-body">
+          <h1>I would like to go to</h1>
+          <div class="col-6">
+            <%= select_tag "city", options_for_select(City.all.map{|city| city.name})  %>
+          </div>
+          <%= button_tag "Next", type: "button", class: "btn btn-flat",
+            data: {
+              action: "click->wizard#nextStep",
+              next_step: 2,
+            } %>
+            <%= button_tag "Previous", type: "button", class: "btn btn-flat",
+              data: {
+              action: "click->wizard#previousStep",
+              previous_step: 0,
+            } %>
         </div>
-        <%= button_tag "Next", type: "button", class: "btn btn-flat",
-          data: {
-            action: "click->wizard#nextStep",
-            next_step: 2,
-          } %>
-          <%= button_tag "Previous", type: "button", class: "btn btn-flat",
-          data: {
-            action: "click->wizard#previousStep",
-            previous_step: 0,
-          } %>
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-2">
-        <h1>I want to go to the...</h1>
-        <% ["mountain", "river", "city"].each do |stops| %>
-          <%= label_tag "stops_#{stops}", stops %>
-          <%= check_box_tag "stopss[]", stops %>
-        <% end %>
-        <%= button_tag "Next", type: "button", class: "btn btn-flat",
-          data: {
-            action: "click->wizard#nextStep",
-            next_step: 3,
-          } %>
+          <div class="banner-body">
+          <h1>I want to go to the</h1>
+            <div class="mycheckboxes">
+              <% ["beach", "mountain", "city", "desert",].each do |stops| %>
+              <div class="mycheck">
+                <%= label_tag "stops_#{stops}", stops %>
+                <%= check_box_tag "stops[]", stops %>
+              </div>
+              <% end %>
+            </div>
+            <%= button_tag "Next", type: "button", class: "btn btn-flat",
+            data: {
+              action: "click->wizard#nextStep",
+              next_step: 3,
+            } %>
+          </div>
           <%= button_tag "Previous", type: "button", class: "btn btn-flat",
-          data: {
-            action: "click->wizard#previousStep",
-            previous_step: 1,
-          } %>
+              data: {
+              action: "click->wizard#previousStep",
+              previous_step: 1,
+            } %>
 
       </div>
+
 
       <div class="wizard-steps-step wizard-steps-step-3">
         <div class="banner-body">
         <h1>When I travel I like...</h1>
-        <% ["party", "tourism", "museums"].each do |stops| %>
+        <% ["partying", "sightseeing", "eating out"].each do |stops| %>
           <%= label_tag "stops_#{stops}", stops %>
-          <%= check_box_tag "stopss[]", stops %>
+          <%= check_box_tag "stops[]", stops %>
         <% end %>
-        <%= button_tag "Previous", type: "button", class: "btn btn-flat",
-          data: {
-            action: "click->wizard#previousStep",
-            previous_step: 2,
-          } %>
+      <%= button_tag "Previous", type: "button", class: "btn btn-flat",
+              data: {
+              action: "click->wizard#previousStep",
+              previous_step: 2,
+            } %>
         <%= button_tag "Search", type: "submit", class: "btn btn-flat" %>
       </div>
       </div>
     <% end %>
+
   </div>
 </div>
 
 <div class="home-cards-container">
-
     <div>
+      <h1 id="home-header1">Squeeze the most out of your destination</h1>
+        <%= image_tag 'photographs.png', class: "travel-images" %>
       <div class="container">
-        <h1 id="home-header">How does Travelsy work?</h1>
+        <h1 id="home-header2">How does Travelsy work?</h1>
           <%= image_tag 'home-page-route.png', class: "home-itinerary-image" %>
     </div>
     <div class="home-headers">
-    <h2>Not sure where to go?</h2>
+    <h1>Not sure where to go?</h1>
     <h4>Take a look at our most popular destinations</h4>
     </div>
     <div class="home-cards">
