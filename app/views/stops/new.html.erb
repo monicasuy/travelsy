@@ -7,7 +7,6 @@
     <%= stops.input :category, collection: ['Views', 'Monuments', 'Neighborhoods', 'Museums', 'Sports'] %>
     <%= stops.input :price %>
     <%= stops.input :address, id:'stop_address' %>
-    <%= stops.input :content, as: :text %>
     <%= stops.input :photo, as: :file %>
     <%= stops.submit "Add stop", class: "btn-new-itinerary" %>
     <%= link_to "Finish", city_itinerary_path(@itinerary.city, @itinerary), class: "btn-new-stop" %>
