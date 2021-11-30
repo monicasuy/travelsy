@@ -86,7 +86,7 @@
       <div class="itinerary-cards">
          <% @top_three.each do |itinerary| %>
          <%= link_to  city_itinerary_path(@city, itinerary) do %>
-          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %>')">
+          <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path itinerary.photo.key %>'); background-size: cover; background-position: center;">
 
              <h1 class="days"><strong><%= itinerary.days %> days </strong></h1>
 
@@ -122,7 +122,7 @@
       <div class="itinerary-cards">
          <% @top_three_day.each_with_index do |itinerary,index| %>
          <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
-         <div class ="itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#=itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
+         <div class ="itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path itinerary.photo.key %>'); background-size: cover; background-position: center;">
             <div class="itinerary-footer">
               <div class= "icons">
                   <%= itinerary.upvotes %>
@@ -156,7 +156,7 @@
     <div class="itinerary-cards">
          <% @top_four_day.each_with_index do |itinerary, index| %>
          <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
-          <div class ="itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x500/?<%= @city.name %> <%#itinerary.stops[index].title %>&random=<%= itinerary.id %>')">
+          <div class ="itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path itinerary.photo.key %>'); background-size: cover; background-position: center;">
             <div class="itinerary-footer">
               <div class= "icons">
                   <%= itinerary.upvotes %>
