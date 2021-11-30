@@ -15,6 +15,28 @@
   }
 }
 
+.side-line {
+  width: 2px;
+  margin-right: 24px;
+  border-left: 4px solid #FF5F7E;
+  position:relative;
+  background: #FF5F7E; }
+
+ .side-avatar {
+   position: absolute;
+   top: 50%;
+   left: -14px;
+   background:#FF5F7E;
+   color: white;
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   text-align: center;
+ }
+
+
+
+
 .card-product img {
   height: 100%;
   width: 50%;

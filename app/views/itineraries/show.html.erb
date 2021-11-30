@@ -1,9 +1,14 @@
 <div class="itinerary-main-container">
+
   <div class="container">
     <h2> Just one more thing</h2>
     <div class="itinerary-content">
-    <%= @itinerary.content %>
-      <% @days.each do |day| %>
+      <p><%= @itinerary.content %></p>
+      <% @days.each_with_index do |day, index| %>
+        <div class="d-flex">
+          <div class="side-line">
+            <p class= "side-avatar"><%= index + 1 %></p>
+          </div>
           <div class="card-product">
             <% pic =  @stops.where(day: day)&.first&.photo&.key %>
             <%= cl_image_tag pic unless pic.nil?%>
@@ -16,11 +21,11 @@
               <% end %>
             </div>
           </div>
+        </div>
       <% end %>
     </div>
   </div>
   <div id="map"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
 </div>
