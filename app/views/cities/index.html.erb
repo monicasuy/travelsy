@@ -34,7 +34,7 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-2">
-          <div class="banner-body">
+        <div class="banner-body">
 
           <h1>I would like to visit... </h1>
             <div class="form-container">
@@ -61,40 +61,40 @@
               action: "click->wizard#nextStep",
               next_step: 3,
             } %>
-          </div>
+        </div>
       </div>
-
 
       <div class="wizard-steps-step wizard-steps-step-3">
         <div class="banner-body-tags">
-        <h1>When I travel I like...</h1>
-            <div class="form-container">
+          <h1>When I travel I like...</h1>
+          <div class="form-container">
 
-                <p>
-                  <input class="select-tags" type="checkbox" id="partying" name="partying" checked>
-                  <label for="partying">partying</label>
-                  <input class="select-tags" type="checkbox" id="drinking" name="drinking" checked>
-                  <label for="drinking">drinking</label>
-                  <input class="select-tags" type="checkbox" id="hiking" name="hiking" checked>
-                  <label for="hiking">hiking</label>
-                  <input class="select-tags" type="checkbox" id="relaxing" name="relaxing" checked>
-                  <label for="relaxing">relaxing</label>
-                </p>
+              <p>
+                <input class="select-tags" type="checkbox" id="partying" name="partying" checked>
+                <label for="partying">partying</label>
+                <input class="select-tags" type="checkbox" id="drinking" name="drinking" checked>
+                <label for="drinking">drinking</label>
+                <input class="select-tags" type="checkbox" id="hiking" name="hiking" checked>
+                <label for="hiking">hiking</label>
+                <input class="select-tags" type="checkbox" id="relaxing" name="relaxing" checked>
+                <label for="relaxing">relaxing</label>
+              </p>
 
-            </div>
+          </div>
 
-        <%# Itinerary::ACTIVITIES.each do |activity| %>
-          <%#= label_tag "stops_#{activity}", activity %>
-          <%#= check_box_tag "keywords[]", activity %>
-        <%# end %>
+          <%# Itinerary::ACTIVITIES.each do |activity| %>
+            <%#= label_tag "stops_#{activity}", activity %>
+            <%#= check_box_tag "keywords[]", activity %>
+          <%# end %>
 
-        <div class="btn-container">
-          <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
-                data: {
-                  action: "click->wizard#previousStep",
-                previous_step: 2,
-              } %>
-          <%= button_tag "Discover", type: "submit", class: "btn btn-wheel-next" %>
+          <div class="btn-container">
+            <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
+                  data: {
+                    action: "click->wizard#previousStep",
+                  previous_step: 2,
+                } %>
+            <%= button_tag "Discover", type: "submit", class: "btn btn-wheel-next" %>
+          </div>
         </div>
       </div>
     <% end %>
@@ -105,14 +105,15 @@
 <div class="home-cards-container">
     <div>
       <h1 id="home-header1">Squeeze the most out of your destination</h1>
-        <%= image_tag 'photographs.png', class: "travel-images" %>
+      <%= image_tag 'photographs.png', class: "travel-images" %>
       <div class="container">
         <h1 id="home-header2">How does Travelsy work?</h1>
-          <%= image_tag 'home-page-route.png', class: "home-itinerary-image" %>
+        <%= image_tag 'home-page-route.png', class: "home-itinerary-image" %>
+      </div>
     </div>
     <div class="home-headers">
-    <h1>Not sure where to go?</h1>
-    <h4>Take a look at our most popular destinations</h4>
+      <h1>Not sure where to go?</h1>
+      <h4>Take a look at our most popular destinations</h4>
     </div>
     <div class="home-cards">
       <% @cities.each do |city| %>
@@ -123,5 +124,4 @@
         <% end %>
       <% end %>
     </div>
-  </div>
 </div>
