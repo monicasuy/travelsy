@@ -35,6 +35,7 @@
 
       <div class="wizard-steps-step wizard-steps-step-2">
           <div class="banner-body">
+
           <h1>I would like to visit... </h1>
             <div class="form-container">
               <form action="#">
@@ -83,6 +84,12 @@
                 </p>
               </form>
             </div>
+        
+        <%# Itinerary::ACTIVITIES.each do |activity| %>
+          <%#= label_tag "stops_#{activity}", activity %>
+          <%#= check_box_tag "keywords[]", activity %>
+        <%# end %>
+
         <div class="btn-container">
           <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
                 data: {

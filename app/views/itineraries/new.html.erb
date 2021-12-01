@@ -4,6 +4,7 @@
       <%= simple_form_for [ @city, @itinerary ], html: {class: "grid"} do |f| %>
         <%= f.input :days %>
         <%= f.input :content, as: :text %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit "Submit", class: "btn-new-itinerary" %>
       <% end %>
       <img src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="picture of someone holding a map">

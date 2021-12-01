@@ -7,6 +7,9 @@ class Itinerary < ApplicationRecord
                                                 wrong_length: "Description should be between 10 and 2400 characters" }
   validates :days, presence: true, inclusion: { within: 1..5 }
   accepts_nested_attributes_for :stops
+  has_one_attached :photo
+  ACTIVITIES = ["partying", "drinking", "hiking", "relaxing" ]
+  TYPE = ["monuments", "iconic buildings", "museums", "restaurants", "neighbourhoods"]
 
   def total_cost
     total_price = 0
