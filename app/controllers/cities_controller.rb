@@ -15,7 +15,6 @@ class CitiesController < ApplicationController
       @itineraries = Itinerary.where(city: city).where(keywords: @keywords)
     elsif city.present?
       @itineraries = Itinerary.where(city: city)
-      raise
     else
       @itineraries = City.find(params[:id]).itineraries
     end
