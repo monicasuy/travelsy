@@ -8,12 +8,14 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
     city = City.find_by(name: params[:city])
-    type = params[:type]
-
-    if city.present?
+    @keywords = []
+    @keywords = params.each.to_a
+    @keywords = @keywords.map { |k| k[0] }
+    if city.present? && @keywords.any?
+      @itineraries = Itinerary.where(city: city).where(keywords: @keywords)
+    elsif city.present?
       @itineraries = Itinerary.where(city: city)
-    elsif city.present? && params[:keywords].any?
-      @itineraries = Itinerary.where(city: city).where(keywords: params[:keywords])
+      raise
     else
       @itineraries = City.find(params[:id]).itineraries
     end

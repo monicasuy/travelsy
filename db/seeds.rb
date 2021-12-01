@@ -211,7 +211,7 @@ new_user = User.create!(
   itinerary1 = Itinerary.create!(
         content: "A beautiful itinerary for those who love Gaudí and amazing food!",
         days: 3,
-        upvotes: Faker::Number.between(from: 50, to: 1000),
+        upvotes: 1321,
         city: barcelona,
         user: new_user,
         keywords: Itinerary::ACTIVITIES.sample
@@ -240,7 +240,7 @@ new_user = User.create!(
         address: "El Born, 08003 Barcelona",
         category: "neighbourhoods",
         itinerary: itinerary1,
-        day: 2
+        day: 1
       )
 
     stop4 = Stop.create!(
@@ -325,8 +325,8 @@ new_user = User.create!(
 
   itinerary2 = Itinerary.create!(
         content: "The perfect itinerary for the lovers of food, art and history",
-        days: 3,
-        upvotes: Faker::Number.between(from: 50, to: 1000),
+        days: 4,
+        upvotes: 1236,
         city: barcelona,
         user: new_user,
         keywords: Itinerary::ACTIVITIES.sample
@@ -403,17 +403,7 @@ new_user = User.create!(
       )
 
 
-    stop19 = Stop.create!(
-        title: "Sant Pau",
-        price: 10,
-        address: "Carrer de Sant Quintí, 89, 08041 Barcelona",
-        category: "iconic building",
-        itinerary: itinerary2,
-        day: 3
-      )
-
-
-    stop20 = Stop.create!(
+      stop19 = Stop.create!(
         title: "Barceloneta",
         price: 0,
         address: "Paseo Marítimo Barceloneta, 14, 08003 Barcelona",
@@ -422,8 +412,7 @@ new_user = User.create!(
         day: 3
       )
 
-
-    stop21 = Stop.create!(
+      stop20 = Stop.create!(
         title: "Arc de Triomf",
         price: 0,
         address: "Passeig de Lluís Companys, 08003 Barcelona",
@@ -433,7 +422,7 @@ new_user = User.create!(
       )
 
 
-    stop22 = Stop.create!(
+      stop21 = Stop.create!(
         title: "Quillo",
         price: 18,
         address: "Carrer del Rec Comtal, 2, 08003 Barcelona",
@@ -442,12 +431,38 @@ new_user = User.create!(
         day: 3
       )
 
+      stop22 = Stop.create!(
+          title: "Sant Pau",
+          price: 10,
+          address: "Carrer de Sant Quintí, 89, 08041 Barcelona",
+          category: "iconic building",
+          itinerary: itinerary2,
+          day: 4
+        )
+
+      stop42 = Stop.create!(
+        title: "Encercle",
+        price: 22,
+        address: "Carrer de Corsega, 372, 08037 Barcelona",
+        category: "restaurant",
+        itinerary: itinerary2,
+        day: 4
+      )
+
+      stop43 = Stop.create!(
+        title: "Museum of National Art of Catalonia",
+        price: 12,
+        address: "Palau Nacional, Parc de Montjuïc, s/n, 08038 Barcelona",
+        category: "museum",
+        itinerary: itinerary2,
+        day: 4
+      )
 
 
   itinerary3 = Itinerary.create!(
         content: "Beach, food and art, what else could you want?",
-        days: 3,
-        upvotes: Faker::Number.between(from: 50, to: 1000),
+        days: 5,
+        upvotes: 1167,
         city: barcelona,
         user: new_user,
         keywords: Itinerary::ACTIVITIES.sample
@@ -536,7 +551,7 @@ new_user = User.create!(
     stop31 = Stop.create!(
         title: "Montjuïc",
         price: 0,
-        address: "Montjuïc, 08038 Barcelona",
+        address: "Passeig del Migdia, 147, 08038 Barcelona",
         category: "views",
         itinerary: itinerary3,
         day: 3
@@ -552,6 +567,59 @@ new_user = User.create!(
         day: 3
       )
 
+    stop44 = Stop.create!(
+      title: "Camp Nou",
+      price: 26,
+      address: "C. d'Arístides Maillol, 12, 08028 Barcelona",
+      category: "sports",
+      itinerary: itinerary3,
+      day: 4
+    )
+
+    stop45 = Stop.create!(
+      title: "Joanet",
+      price: 20,
+      address: "Plaça de Sant Agustí Vell, 6, 08003 Barcelona",
+      category: "restaurant",
+      itinerary: itinerary3,
+      day: 4
+    )
+
+    stop46 = Stop.create!(
+      title: "Moco museum",
+      price: 12,
+      address: "Carrer de Montcada, 25, 08003 Barcelona",
+      category: "museum",
+      itinerary: itinerary3,
+      day: 4
+    )
+
+    stop47 = Stop.create!(
+      title: "Barceloneta",
+      price: 0,
+      address: "Paseo Marítimo Barceloneta, 14, 08003 Barcelona",
+      category: "neighbourhoods",
+      itinerary: itinerary3,
+      day: 5
+    )
+
+    stop48 = Stop.create!(
+      title: "Arc de Triomf",
+      price: 0,
+      address: "Passeig de Lluís Companys, 08003 Barcelona",
+      category: "monuments",
+      itinerary: itinerary3,
+      day: 5
+    )
+
+    stop49 = Stop.create!(
+      title: "Paradiso",
+      price: 20,
+      address: "Carrer de Rera Palau, 4, 08003 Barcelona",
+      category: "drinking",
+      itinerary: itinerary3,
+      day: 5
+    )
 
 
   itinerary4 = Itinerary.create!(
@@ -699,7 +767,7 @@ new_user = User.create!(
 
   itinerary10 = Itinerary.create!(
         content: "A great itinerary for art lovers!",
-        days: 4,
+        days: 5,
         upvotes: Faker::Number.between(from: 50, to: 1000),
         city: barcelona,
         user: new_user,
@@ -708,7 +776,7 @@ new_user = User.create!(
 
   itinerary11 = Itinerary.create!(
         content: "Have a great time visiting some of my favourite spots in the city",
-        days: 4,
+        days: 5,
         upvotes: Faker::Number.between(from: 50, to: 1000),
         city: barcelona,
         user: new_user,
@@ -717,7 +785,7 @@ new_user = User.create!(
 
   itinerary12 = Itinerary.create!(
         content: "All the places I love from this city, I hope you enjoy :)",
-        days: 4,
+        days: 5,
         upvotes: Faker::Number.between(from: 50, to: 1000),
         city: barcelona,
         user: new_user,
@@ -772,10 +840,10 @@ stop15.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upl
 stop16.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290234/park-guell_a0urh3.jpg'), filename: 'park-guell')
 stop17.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638291949/bunkers_u9adqg.jpg'), filename: 'bunkers')
 stop18.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638295292/la_boqueria_uheyol.jpg'), filename: 'la-boqueria')
-stop19.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290864/sant-pau_hvq7rk.jpg'), filename: 'sant-pau')
-stop20.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290925/barceloneta_i6gdl5.jpg'), filename: 'barceloneta')
-stop21.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292123/arc-de-triomf_q4kmcr.jpg'), filename: 'arc-de-triomf')
-# stop22.photo.attach(io: URI.open(), filename:)
+stop19.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290925/barceloneta_i6gdl5.jpg'), filename: 'barceloneta')
+stop20.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292123/arc-de-triomf_q4kmcr.jpg'), filename: 'arc-de-triomf')
+# stop21.photo.attach(io: URI.open(), filename:)
+stop22.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290864/sant-pau_hvq7rk.jpg'), filename: 'sant-pau')
 stop23.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290925/barceloneta_i6gdl5.jpg'), filename: 'barceloneta')
 stop24.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292123/arc-de-triomf_q4kmcr.jpg'), filename: 'arc-de-triomf')
 # stop25.photo.attach(io: URI.open(), filename:)
@@ -795,3 +863,11 @@ stop38.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upl
 stop39.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290864/sant-pau_hvq7rk.jpg'), filename: 'sant-pau')
 stop40.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638291949/bunkers_u9adqg.jpg'), filename: 'bunkers')
 stop41.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290234/park-guell_a0urh3.jpg'), filename: 'park-guell')
+# stop42.photo.attach(io: URI.open(), filename:)
+stop43.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638355148/isi-parente-NLbW82E6w54-unsplash_yqetbr.jpg'), filename: 'mnac')
+stop44.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638291003/camp-nou_ryvnn0.jpg'), filename: 'camp-nou')
+# stop45.photo.attach(io: URI.open(), filename:)
+# stop46.photo.attach(io: URI.open(), filename:)
+stop47.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290925/barceloneta_i6gdl5.jpg'), filename: 'barceloneta')
+stop48.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292123/arc-de-triomf_q4kmcr.jpg'), filename: 'arc-de-triomf')
+# stop49.photo.attach(io: URI.open(), filename:)

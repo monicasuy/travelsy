@@ -8,8 +8,8 @@ class Itinerary < ApplicationRecord
   validates :days, presence: true, inclusion: { within: 1..5 }
   accepts_nested_attributes_for :stops
   has_one_attached :photo
-  ACTIVITIES = ["partying", "drinking", "hiking", "relaxing" ]
-  TYPE = ["monuments", "iconic buildings", "museums", "restaurants", "neighbourhoods"]
+  ACTIVITIES = ["partying", "drinking", "hiking", "relaxing", "monuments", "iconic buildings", "neighbourhoods", "restaurants", "museums" ]
+
 
   def total_cost
     total_price = 0
@@ -18,5 +18,4 @@ class Itinerary < ApplicationRecord
     end
     return total_price
   end
-
 end

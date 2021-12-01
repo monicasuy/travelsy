@@ -14,7 +14,7 @@
             <%= cl_image_tag pic unless pic.nil?%>
             <div class="card-product-infos">
               <h2 class="day-header">Day <%= day %></h2>
-              <% @stops.where(day: day).each do |stop| %>
+              <% @stops.where(day: day).order(created_at: :asc).each do |stop| %>
                 <ul>
                   <li><%= stop.title %></li>
                 </ul>

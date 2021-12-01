@@ -38,7 +38,8 @@
 
           <h1>I would like to visit... </h1>
             <div class="form-container">
-                <p>
+
+                 <p>
                   <input type="checkbox" id="monuments" name="monuments" checked>
                   <label for="monuments">monuments</label>,
                   <input type="checkbox" id="iconic buildings" name="iconic buildings">
@@ -68,24 +69,14 @@
         <div class="banner-body-tags">
           <h1>When I travel I like...</h1>
           <div class="form-container">
-
-              <p>
-                <input class="select-tags" type="checkbox" id="partying" name="partying" checked>
-                <label for="partying">partying</label>
-                <input class="select-tags" type="checkbox" id="drinking" name="drinking" checked>
-                <label for="drinking">drinking</label>
-                <input class="select-tags" type="checkbox" id="hiking" name="hiking" checked>
-                <label for="hiking">hiking</label>
-                <input class="select-tags" type="checkbox" id="relaxing" name="relaxing" checked>
-                <label for="relaxing">relaxing</label>
-              </p>
-
+            <p>
+              <% Itinerary::ACTIVITIES.first(4).each do |activity| %>
+                <input class="select-tags" type="checkbox" id="<%= activity %>" name="<%= activity %>" checked>
+                <label for="<%= activity %>"><%= activity %></label>
+              <% end %>
+            </p>
           </div>
 
-          <%# Itinerary::ACTIVITIES.each do |activity| %>
-            <%#= label_tag "stops_#{activity}", activity %>
-            <%#= check_box_tag "keywords[]", activity %>
-          <%# end %>
 
           <div class="btn-container">
             <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
