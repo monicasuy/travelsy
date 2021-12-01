@@ -6,3 +6,11 @@
     margin: 20px 0;
   }
 }
+
+.create-itinerary__content {
+  flex-direction: column;
+  h3 {
+    color: #404347;
+    font-weight: 300;
+  }
+}
