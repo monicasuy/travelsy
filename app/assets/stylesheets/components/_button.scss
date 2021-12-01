@@ -81,15 +81,18 @@
   text-align: center;
 }
 
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
 .btn-itinerary-preview {
-  width: fit-content;
   padding: 10px;
-  margin-left: 500px;
-  margin-right: 20px;
-  margin-bottom: -30px;
-  margin-top: 50px;
   background: #FF5F7E;
   border-radius: 5px;
   color: white;
   border: none;
+  font-weight: 300;
 }

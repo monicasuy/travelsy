@@ -1,9 +1,10 @@
 <div class="itinerary-main-container">
 
   <div class="container">
-    <h2> Just one more thing</h2>
+  <%= image_tag "https://kitt.lewagon.com/placeholder/users/Dianabarr19", class: "avatar-itinerary" %>
+    <h1> Just one more thing</h1>
     <div class="itinerary-content">
-      <p><%= @itinerary.content %></p>
+      <h3><%= @itinerary.content %></h3>
       <% @days.each_with_index do |day, index| %>
         <div class="d-flex">
           <div class="side-line">
@@ -23,16 +24,16 @@
           </div>
         </div>
       <% end %>
+      <div class="modal-buttons">
+  <button type="button" class="btn-itinerary-preview" data-toggle="modal" data-target=".bd-example-modal-lg">Preview Itinerary</button>
+  <button type="button" class="btn-itinerary-preview ml-4" data-toggle="modal" data-target="#exampleModal">Start Trip</button>
+</div>
+
     </div>
   </div>
   <div id="map"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-</div>
-
-<div class="modal-buttons">
-  <button type="button" class="btn-itinerary-preview " data-toggle="modal" data-target=".bd-example-modal-lg">Preview Itinerary</button>
-  <button type="button" class="btn-itinerary-preview" data-toggle="modal" data-target="#exampleModal">Start Trip</button>
 </div>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
