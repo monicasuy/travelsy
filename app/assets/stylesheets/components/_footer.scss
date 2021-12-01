@@ -40,3 +40,14 @@ footer{
 .footer-copyright {
   font-size: 14px;
 }
+
+.footer-image {
+  height: 353px;
+  margin-bottom: -75px;
+}
+
+.footer-image img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
