@@ -23,8 +23,6 @@
   top: 20px;
   background: #FF5F7E; }
 
-
-
  .side-avatar {
    position: absolute;
    top: 35%;
@@ -36,9 +34,6 @@
    border-radius: 50%;
    text-align: center;
  }
-
-
-
 
 .card-product img {
   height: 100%;
@@ -63,4 +58,12 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.create-itinerary {
+  border: 1.8px solid #FF865E;
+  border-radius: 7px;
+  padding: 20px 0px;
+  width: 50%;
+  margin: 0 auto;
 }

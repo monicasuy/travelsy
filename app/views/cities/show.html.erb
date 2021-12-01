@@ -16,11 +16,8 @@
       </div>
   </div>
 <% end %>
-
-  <%= link_to "Add an Itinerary", new_city_itinerary_path(@city), class: "btn-create-itinerary"%>
-
 <div class="cities-main-container">
-  <div class="filters">
+  <div class="filters" >
     <p> Filters</p>
 <div class="interests">
     <p>Activities </p>
@@ -59,7 +56,7 @@
 
   <label class="container">
     <input type="checkbox">
-    <span class="checkmark"></span>Neighborhoods</label>
+    <span class="checkmark"></span>Neighbourhoods</label>
 
 
   <label class="container">
@@ -177,6 +174,14 @@
           <% end  %>
     </div>
 
+  </div>
+
+
+  <div class="create-itinerary">
+    <div class="d-flex align-items-center justify-content-between create-itinerary__content">
+      <h3>Didn't find what you were looking for?</h3>
+    <%= link_to "Add an Itinerary", new_city_itinerary_path(@city), class: "btn-create-itinerary"%>
+    </div>
   </div>
 
 </div>
