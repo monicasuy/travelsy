@@ -78,12 +78,13 @@
 <div class="container cities-container">
     <div class='top-rated'>
 
-      <h2 class="cities-headers">Top Rated Itineraries </h2>
+      <h2 class="cities-headers">Top Rated Itineraries for <%= @city.name %></h2>
 
       <div class="itinerary-cards">
          <% @top_three.each do |itinerary| %>
          <%= link_to  city_itinerary_path(@city, itinerary) do %>
           <div class ="itinerary-card d-flex align-items-center justify-content-center" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path itinerary.photo.key %>'); background-size: cover; background-position: center;">
+           <%= image_tag "https://kitt.lewagon.com/placeholder/users/monicasuy", class: "avatar-show-top", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
              <h1 class="days"><strong><%= itinerary.days %> days </strong></h1>
 
@@ -120,6 +121,7 @@
          <% @top_three_day.each_with_index do |itinerary,index| %>
          <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
          <div class ="itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path itinerary.photo.key %>'); background-size: cover; background-position: center;">
+                <%= image_tag "https://kitt.lewagon.com/placeholder/users/Dianabarr19", class: "avatar-show-top", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="itinerary-footer">
               <div class= "icons">
                   <%= itinerary.upvotes %>
@@ -154,6 +156,7 @@
          <% @top_four_day.each_with_index do |itinerary, index| %>
          <%= link_to city_itinerary_path(itinerary.city, itinerary) do %>
           <div class ="itinerary-card" style = "background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path itinerary.photo.key %>'); background-size: cover; background-position: center;">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/hmammado", class: "avatar-show-top", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="itinerary-footer">
               <div class= "icons">
                   <%= itinerary.upvotes %>
