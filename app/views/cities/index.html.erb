@@ -35,14 +35,23 @@
 
       <div class="wizard-steps-step wizard-steps-step-2">
           <div class="banner-body">
-          <h1>I want to see </h1>
-            <div class="mycheckboxes">
-              <% Itinerary::TYPE.each do |type| %>
-              <div class="mycheck">
-                <%= label_tag "stops_#{type}", type %>
-                <%= check_box_tag "keywords[]", type %>
-            </div>
-              <% end %>
+
+          <h1>I would like to visit... </h1>
+            <div class="form-container">
+              <form action="#">
+                <p>
+                  <input type="checkbox" id="monuments" name="monuments" checked>
+                  <label for="monuments">monuments</label>,
+                  <input type="checkbox" id="iconic buildings" name="iconic buildings">
+                  <label for="iconic buildings">iconic buildings</label>,
+                  <input type="checkbox" id="neighbourhoods" name="neighbourhoods">
+                  <label for="neighbourhoods">neighbourhoods</label>,<br>
+                  <input type="checkbox" id="restaurants" name="restaurants">
+                  <label for="restaurants">restaurants</label>, and
+                  <input type="checkbox" id="museums" name="museums" checked>
+                  <label for="museums">museums</label>.
+                </p>
+              </form>
             </div>
             <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
               data: {
@@ -59,12 +68,28 @@
 
 
       <div class="wizard-steps-step wizard-steps-step-3">
-        <div class="banner-body">
+        <div class="banner-body-tags">
         <h1>When I travel I like...</h1>
-        <% Itinerary::ACTIVITIES.each do |activity| %>
-          <%= label_tag "stops_#{activity}", activity %>
-          <%= check_box_tag "keywords[]", activity %>
-        <% end %>
+        <div class="form-container">
+              <form action="#">
+                <p>
+                  <input class="select-tags" type="checkbox" id="partying" name="partying" checked>
+                  <label for="partying">partying</label>
+                  <input class="select-tags" type="checkbox" id="drinking" name="drinking" checked>
+                  <label for="drinking">drinking</label>
+                  <input class="select-tags" type="checkbox" id="hiking" name="hiking" checked>
+                  <label for="hiking">hiking</label>
+                  <input class="select-tags" type="checkbox" id="relaxing" name="relaxing" checked>
+                  <label for="relaxing">relaxing</label>
+                </p>
+              </form>
+            </div>
+        
+        <%# Itinerary::ACTIVITIES.each do |activity| %>
+          <%#= label_tag "stops_#{activity}", activity %>
+          <%#= check_box_tag "keywords[]", activity %>
+        <%# end %>
+
         <div class="btn-container">
           <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
                 data: {

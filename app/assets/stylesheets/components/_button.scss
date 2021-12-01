@@ -31,7 +31,8 @@
 .btn-signup:hover,
 .btn-create-itinerary:hover,
 .btn-wheel:hover,
-.btn-wheel-next:hover {
+.btn-wheel-next:hover,
+.btn-new-stop:hover {
   background: #FF6767;
   color: white;
   text-decoration: none;
@@ -48,7 +49,7 @@
 
 
 .btn-new-stop {
-  background-color: #900C3F;
+  background-color: #D83A56;
   color: white;
   border-radius: 5px;
   font-weight: 400;
@@ -56,12 +57,11 @@
   display: inline-block;
   margin-top: 20px;
   border: none;
+  padding: 15px 60px !important;
 }
 
-.btn-new-stop:hover {
-  text-decoration: none;
-  color:white;
-  background-color: #D83A56;
+.btn-new-stop {
+  font-weight: 300;
 }
 
 .btn-create-itinerary {
@@ -80,6 +80,9 @@
   padding: 6px 28px;
 }
 
+
+.btn-container {
+  text-align: center;
 
 .btn-itinerary-preview {
   width: fit-content;
