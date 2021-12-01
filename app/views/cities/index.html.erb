@@ -15,21 +15,35 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-1">
-        <div class="banner-body">
+        <div class="banner-body d-flex flex-column">
           <h1>I would like to go to...</h1>
-          <div class="col-6">
-            <%= select_tag "city", options_for_select(City.all.map{|city| city.name})  %>
-          </div>
+
+
+           <%#= select_tag "city", options_for_select(City.all.map{|city| city.name}, input_html: { data: { controller: 'select2' } })  %>
+           <%#= collection_select :city, :city, City.all.map{|city| city.name}, :city, :city %>
+           <p>
+            I would love to visit
+
+              <select name="cities" class="select-city">
+                <% City.all.each do |city| %>
+                  <option value="<%= city.name %>"><%= city.name %></option>
+                <% end %>
+              </select>
+
+           </p>
+
+          <div>
             <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
               data: {
-              action: "click->wizard#previousStep",
+                action: "click->wizard#previousStep",
               previous_step: 0,
             } %>
             <%= button_tag "Next →", type: "button", class: "btn btn-wheel-next",
               data: {
-              action: "click->wizard#nextStep",
+                action: "click->wizard#nextStep",
               next_step: 2,
             } %>
+          </div>
         </div>
       </div>
 
