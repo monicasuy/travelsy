@@ -51,6 +51,7 @@
   border: 1px solid #FF6767;
   margin-right: 0.6rem;
   margin-bottom: 0.4rem;
+  transition: all 0.5s ease-in-out;
 }
 
 .select-tags:checked + label {
@@ -60,3 +61,18 @@
 }
 
 // .select-tags
+
+
+.select-city {
+  border: none;
+  padding: 0;
+  text-align: left;
+  border-bottom: 2px solid #900C3F;
+  border-radius: 0px;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+
+}
