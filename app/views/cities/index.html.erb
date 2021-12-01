@@ -38,7 +38,6 @@
 
           <h1>I would like to visit... </h1>
             <div class="form-container">
-              <form action="#">
                 <p>
                   <input type="checkbox" id="monuments" name="monuments" checked>
                   <label for="monuments">monuments</label>,
@@ -51,7 +50,6 @@
                   <input type="checkbox" id="museums" name="museums" checked>
                   <label for="museums">museums</label>.
                 </p>
-              </form>
             </div>
             <%= button_tag "← Previous", type: "button", class: "btn btn-wheel",
               data: {
@@ -70,8 +68,8 @@
       <div class="wizard-steps-step wizard-steps-step-3">
         <div class="banner-body-tags">
         <h1>When I travel I like...</h1>
-        <div class="form-container">
-              <form action="#">
+            <div class="form-container">
+
                 <p>
                   <input class="select-tags" type="checkbox" id="partying" name="partying" checked>
                   <label for="partying">partying</label>
@@ -82,9 +80,9 @@
                   <input class="select-tags" type="checkbox" id="relaxing" name="relaxing" checked>
                   <label for="relaxing">relaxing</label>
                 </p>
-              </form>
+
             </div>
-        
+
         <%# Itinerary::ACTIVITIES.each do |activity| %>
           <%#= label_tag "stops_#{activity}", activity %>
           <%#= check_box_tag "keywords[]", activity %>
@@ -99,7 +97,6 @@
           <%= button_tag "Discover", type: "submit", class: "btn btn-wheel-next" %>
         </div>
       </div>
-    </div>
     <% end %>
 
   </div>
@@ -120,7 +117,7 @@
     <div class="home-cards">
       <% @cities.each do |city| %>
           <%= link_to city_path(city) do %>
-          <div class="home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/1600x900/?<%= city.name %>')">
+          <div class="home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path city.photo.key %>'); background-size: cover; background-position: center;">
             <h3><strong><%= city.name %></strong></h3>
           </div>
         <% end %>
