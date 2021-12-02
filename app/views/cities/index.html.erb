@@ -24,7 +24,7 @@
             I would love to visit
 
               <select name="cities" class="select-city">
-                <% City.all.each do |city| %>
+                <% @cities.each do |city| %>
                   <option value="<%= city.name %>"><%= city.name %></option>
                 <% end %>
               </select>
