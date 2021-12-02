@@ -85,7 +85,7 @@
           <div class="form-container">
             <p>
               <% Itinerary::ACTIVITIES.first(4).each do |activity| %>
-                <input class="select-tags" type="checkbox" id="<%= activity %>" name="<%= activity %>" checked>
+                <input class="select-tags" type="checkbox" id="<%= activity %>" name="<%= activity %>">
                 <label for="<%= activity %>"><%= activity %></label>
               <% end %>
             </p>

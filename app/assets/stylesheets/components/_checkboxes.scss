@@ -41,6 +41,21 @@
 }
 
 .select-tags + label {
+  background-color: transparent;
+  color: #404347;
+  font-weight: 300;
+  border: 1px solid #FF6767;
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 2px 9px;
+  transition: all 0.5s ease-in-out;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.select-tags:checked + label {
   cursor: pointer;
   display: inline-block;
   font-size: 20px;
@@ -51,13 +66,7 @@
   border: 1px solid #FF6767;
   margin-right: 0.6rem;
   margin-bottom: 0.4rem;
-  transition: all 0.5s ease-in-out;
-}
 
-.select-tags:checked + label {
-  background-color: transparent;
-  color: #404347;
-  font-weight: 300;
 }
 
 // .select-tags

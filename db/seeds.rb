@@ -721,7 +721,7 @@ new_user = User.create!(
 
   itinerary5 = Itinerary.create!(
         content: "A great itinerary for discovering Barcelona",
-        days: 4,
+        days: 3,
         upvotes: Faker::Number.between(from: 50, to: 1000),
         city: barcelona,
         user: new_user,
@@ -730,7 +730,7 @@ new_user = User.create!(
 
   itinerary6 = Itinerary.create!(
         content: "Perfect itinerary for people visiting Barcelona for the first time",
-        days: 4,
+        days: 3,
         upvotes: Faker::Number.between(from: 50, to: 1000),
         city: barcelona,
         user: new_user,
@@ -791,21 +791,22 @@ new_user = User.create!(
         user: new_user,
         keywords: Itinerary::ACTIVITIES.sample
     )
-
+puts "#{Itinerary.count} itineraries created"
 
 # Attaching photos to itinerary cards
-itinerary1.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290864/sant-pau_hvq7rk.jpg'), filename: 'sant-pau_hvq7rk')
-itinerary2.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290653/tibidabo_bmfwfz.jpg'), filename: 'tibidabo_bmfwfz')
-itinerary3.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290925/barceloneta_i6gdl5.jpg'), filename: 'barceloneta_i6gdl5')
-itinerary4.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638289759/sagrada-familia_xew1kl.jpg'), filename: 'sagrada-familia_xew1kl')
-itinerary5.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638291003/camp-nou_ryvnn0.jpg'), filename: 'camp-nou_ryvnn0')
-itinerary6.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638291303/casa-vicens_lwgagi.jpg'), filename: 'casa-vicens_lwgagi')
-itinerary7.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638291949/bunkers_u9adqg.jpg'), filename: 'bunkers_u9adqg')
-itinerary8.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292012/barri-gotic_ijy3lf.jpg'), filename: 'barri-gotic_ijy3lf')
-itinerary9.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292068/rambla_ugx9gi.jpg'), filename: 'rambla_ugx9gi')
+itinerary1.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434887/1_mqskci.jpg'), filename: 'sagrada-familia')
+itinerary2.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434879/2_ntnvn8.jpg'), filename: 'casa-mila')
+itinerary3.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434895/3_anl7a9.jpg'), filename: '3')
+itinerary4.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434883/4_xnui8e.jpg'), filename: '4')
+itinerary5.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434888/5_memwrq.jpg'), filename: '5')
+itinerary6.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434891/6_bxh1yd.jpg'), filename: '6')
+itinerary7.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434901/7_e0vkln.jpg'), filename: '7')
+itinerary8.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434884/8_kgq1wq.jpg'), filename: '8')
+itinerary9.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638434896/9_teyrjs.jpg'), filename: '9')
 itinerary10.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292123/arc-de-triomf_q4kmcr.jpg'), filename: 'arc-de-triomf_q4kmcr')
 itinerary11.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290234/park-guell_a0urh3.jpg'), filename: 'park-guell_a0urh3')
 itinerary12.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292221/casa-mila_ahscab.jpg'), filename: 'casa-mila_ahscab')
+puts "#{Itinerary.all.count} itineraries now have photos!"
 
 # Attaching photos to city cards
 barcelona.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638289759/sagrada-familia_xew1kl.jpg'), filename:'barcelona')
@@ -820,6 +821,7 @@ beijing.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/up
 rome.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638294027/Rome_vqyzv3.jpg'), filename: 'rome')
 delhi.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638294025/Delhi_mrsvfn.jpg'), filename: 'dubai')
 moscow.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638294025/Moscow_oveday.jpg'), filename: 'moscow')
+puts "#{City.all.count} cities now have photos!"
 
 # Attaching photos to stops
 stop1.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290864/sant-pau_hvq7rk.jpg'), filename: 'sant-pau')
@@ -871,3 +873,5 @@ stop44.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upl
 stop47.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638290925/barceloneta_i6gdl5.jpg'), filename: 'barceloneta')
 stop48.photo.attach(io: URI.open('https://res.cloudinary.com/de4v6txjq/image/upload/v1638292123/arc-de-triomf_q4kmcr.jpg'), filename: 'arc-de-triomf')
 # stop49.photo.attach(io: URI.open(), filename:)
+
+puts "#{Stop.all.count} stops now have photos!"
