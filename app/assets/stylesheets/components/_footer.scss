@@ -35,10 +35,12 @@ body{
 }
 footer{
   margin-top: auto;
+
 }
 
 .footer-copyright {
   font-size: 14px;
+  font-weight: 300;
 }
 
 .footer-image {
@@ -50,4 +52,9 @@ footer{
   height: 100%;
   width: 100%;
   overflow: hidden;
+  margin-right: 20px;
+}
+
+.my-container {
+  max-width: 1440px;
 }
