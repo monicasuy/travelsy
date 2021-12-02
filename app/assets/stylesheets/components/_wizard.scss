@@ -1,6 +1,6 @@
 :root {
-  --step-width: 1600px;
-  --step-height: 800px;
+  --step-width: 1200px;
+  --step-height: 600px;
   --left-gap: calc((100vw - var(--step-width)) / 2);
   --bg-color: #FEF9EF;
 }
@@ -48,6 +48,8 @@
 
 .wizard-steps-step-0 {
   transform: rotate(0) translateX(var(--step-height));
+  justify-content: flex-start;
+  margin-top: 15vh;
 }
 
 .wizard-steps-container.is--step-0 {
@@ -55,19 +57,19 @@
 }
 
 .wizard-steps-step-1 {
-  transform: rotate(90deg) translateX(calc(var(--step-height) + 88px));
+  transform: rotate(90deg) translateX(calc(var(--step-height) + 32px));
 }
 
 .wizard-steps-container.is--step-1 {
-  transform: translateX(calc(var(--left-gap) - var(--step-width) / 2 - 88px)) rotate(-90deg);
+  transform: translateX(calc(var(--left-gap) - var(--step-width) / 2 - 32px)) rotate(-90deg);
 }
 
 .wizard-steps-step-2 {
-  transform: rotate(180deg) translateX(calc(var(--step-height) + 88px));
+  transform: rotate(180deg) translateX(calc(var(--step-height) + 32px));
 }
 
 .wizard-steps-container.is--step-2 {
-  transform: translateX(calc(var(--left-gap) - var(--step-width) / 2 - 88px)) rotate(-180deg);
+  transform: translateX(calc(var(--left-gap) - var(--step-width) / 2 - 32px)) rotate(-180deg);
 }
 
 
