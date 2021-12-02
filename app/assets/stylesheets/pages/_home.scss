@@ -27,6 +27,9 @@ p {
 .banner-body {
   // margin-right: -125px;
   text-align: center;
+  background: #fdf9ef69;
+  padding: 40px;
+  border-radius: 8px;
 }
 
 select {
@@ -55,4 +58,9 @@ select {
   margin-top: -9px;
   font-weight: 300;
   letter-spacing: .5px;
+}
+
+.hand-written {
+  font-family: 'Homemade Apple', cursive;
+  padding: 16px;
 }

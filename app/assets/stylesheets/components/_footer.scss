@@ -1,5 +1,4 @@
 .footer {
-  background: #FFB085;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,6 +7,10 @@
   color:#FEF5ED;
   overflow: hidden;
   margin-top: 65px;
+}
+
+.footer-background {
+  background: #FFB085;
 }
 .footer-links {
   display: flex;
@@ -39,7 +42,7 @@ footer{
 }
 
 .footer-copyright {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 300;
 }
 
@@ -53,8 +56,10 @@ footer{
   width: 100%;
   overflow: hidden;
   margin-right: 20px;
+  object-fit: contain;
 }
 
 .my-container {
-  max-width: 1440px;
+  max-width: 1100px;
+  margin: 0px auto;
 }

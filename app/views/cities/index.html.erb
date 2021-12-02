@@ -4,19 +4,22 @@
     <%= form_tag city_path(@barcelona), method: :get do %>
 
       <div class="wizard-steps-step wizard-steps-step-0">
-        <h1>Travelsy</h1>
-        <p>Travel made easy</p>
-        <%= button_tag "Find your next trip", type: "button", class: "btn btn-flat",
-          data: {
-            action: "click->wizard#nextStep",
-            next_step: 1
-          } %>
+        <div class="banner-body p-5">
+          <h1 >Travel made easy</h1>
+          <p class="hand-written"> Your personal travel agent</p>
+          <%= button_tag "Find your next trip", type: "button", class: "btn btn-flat",
+            data: {
+              action: "click->wizard#nextStep",
+              next_step: 1
+            } %>
+        </div>
 
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-1">
         <div class="banner-body d-flex flex-column">
-          <h1>First things first </h1><br> <h3>Please select a city</h3>
+          <h1 >First things first </h1><br>
+          <h3>Please select a city</h3>
 
            <%#= select_tag "city", options_for_select(City.all.map{|city| city.name}, input_html: { data: { controller: 'select2' } })  %>
            <%#= collection_select :city, :city, City.all.map{|city| city.name}, :city, :city %>
@@ -49,15 +52,16 @@
       <div class="wizard-steps-step wizard-steps-step-2">
         <div class="banner-body">
 
-          <h1>I would like to visit... </h1>
+          <h1 >Which places you wanna visit?</h1>
             <div class="form-container">
 
-                 <p>
+                 <p >
+                  I love visiting
                   <input type="checkbox" id="monuments" name="monuments" checked>
                   <label for="monuments">monuments</label>,
                   <input type="checkbox" id="iconic buildings" name="iconic buildings">
                   <label for="iconic buildings">iconic buildings</label>,
-                  <input type="checkbox" id="neighbourhoods" name="neighbourhoods">
+                  <input type="checkbox" id="neighbourhoods" name="neighbourhoods" checked>
                   <label for="neighbourhoods">neighbourhoods</label>,<br>
                   <input type="checkbox" id="restaurants" name="restaurants">
                   <label for="restaurants">restaurants</label>, and
@@ -79,8 +83,8 @@
       </div>
 
       <div class="wizard-steps-step wizard-steps-step-3">
-        <div class="banner-body-tags">
-          <h1>When I travel I like...</h1>
+        <div class="banner-body-tags banner-body">
+          <h1>When I travel I always go...</h1>
           <div class="form-container">
             <p>
               <% Itinerary::ACTIVITIES.first(4).each do |activity| %>
