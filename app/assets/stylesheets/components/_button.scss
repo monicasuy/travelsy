@@ -11,7 +11,8 @@
 .btn-signup,
 .btn-create-itinerary,
 .btn-wheel,
-.btn-wheel-next {
+.btn-wheel-next,
+.btn-secondary {
   color: white;;
   background: #FF5F7E;;
   text-align: center;
@@ -32,7 +33,8 @@
 .btn-create-itinerary:hover,
 .btn-wheel:hover,
 .btn-wheel-next:hover,
-.btn-new-stop:hover {
+.btn-new-stop:hover,
+.btn-secondary:hover {
   background: #FF6767;
   color: white;
   text-decoration: none;
@@ -95,4 +97,9 @@
   color: white;
   border: none;
   font-weight: 300;
+}
+
+.btn-secondary {
+  margin: 0 auto;
+  padding: 6px 20px !important;
 }
