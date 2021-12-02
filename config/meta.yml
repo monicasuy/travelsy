@@ -1,0 +1,5 @@
+meta_product_name: "Travelsy"
+meta_title: "Travelsy - Travel made easy"
+meta_description: "With Travelsy, you will never have to worry about planning a trip ever again. The best itineraries for any city all in one place."
+meta_image: "complete-logo.svg" # should exist in `app/assets/images/`
+twitter_account: "@travelsy"   # required for Twitter Cards
