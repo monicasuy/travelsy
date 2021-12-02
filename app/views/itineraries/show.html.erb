@@ -24,11 +24,6 @@
           </div>
         </div>
       <% end %>
-      <div class="modal-buttons">
-  <button type="button" class="btn-itinerary-preview" data-toggle="modal" data-target=".bd-example-modal-lg">Preview Itinerary</button>
-  <button type="button" class="btn-itinerary-preview ml-4" data-toggle="modal" data-target="#exampleModal">Start Trip</button>
-</div>
-
     </div>
   </div>
   <div id="map"
@@ -36,6 +31,20 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
 
+<div class="user-info">
+  <div class="modal-buttons mt-4">
+    <button type="button" class="btn-itinerary-preview" data-toggle="modal" data-target=".bd-example-modal-lg">Preview Itinerary</button>
+    <button type="button" class="btn-itinerary-preview ml-4" data-toggle="modal" data-target="#exampleModal">Start Trip</button>
+  </div>
+  <div class="user-product mt-5">
+    <img src="https://kitt.lewagon.com/placeholder/users/monicasuy" />
+    <div class="user-product-infos">
+      <small><i>About the author</i></small>
+      <h2>Monica Suy</h2>
+      <p>Monica is originally from Barcelona, but lives in London; she is a fullstack developer, enjoys listening to Taylor Swift music. Loves dogs and traveling around the world.</p>
+    </div>
+  </div>
+</div>
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">

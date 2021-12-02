@@ -5,17 +5,22 @@
 
  .modal-header {
    text-align: center;
+   background-color: #FEF9EF;
+   border-radius: 7px;
  }
 
  .modal-body {
    text-align: center;
    margin-top: 0;
    font-size: 20px;
+   color: #404347;
+   background-color: #FEF9EF;
  }
 
  .modal-content {
    border-radius: 10px;
    height: fit-content;
+   background-color: #FEF9EF;
  }
 
  .modal-buttons {
